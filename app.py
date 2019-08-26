@@ -1,22 +1,22 @@
 ################
 #### Imports ###
 from flask import Flask, render_template, redirect, request, url_for
-
+from flask_pymongo import PyMongo
 
 ################
 #### Config #####
 app = Flask(__name__)
 
 # Mongo Config 
-app.config["MONGO_DBNAME"] = "marfever"
-app.config["MONGO_URI"] = ""
+app.config["MONGO_URI"] = "mongodb+srv://syedroot:Azasr00t@syedcluster-eyeen.mongodb.net/marfever?retryWrites=true&w=majority"
+mongo = PyMongo(app)
 
 ################
 #### Route #####
 @app.route('/')
 def index():
 
-    return render_template("index.html")
+    return render_template("index.html", superheros=mongo.db.superhero.find())
 
 # About Route
 @app.route('/about')
@@ -28,6 +28,12 @@ def about():
 def contact():
     return render_template("contact.html", title='Contact')
 
+
+# View Superhero Route
+@app.route('/viewsuperhero')
+def viewsuperhero():
+    return render_template("viewchar.html", title='View Superhero')
+
 # Add Superhero Route
 @app.route('/addsuperhero')
 def addsuperhero():
@@ -37,6 +43,11 @@ def addsuperhero():
 @app.route('/editsuperhero')
 def editsuperhero():
     return render_template("editchar.html", title='Edit Superhero')
+
+# test 
+@app.route('/test')
+def test():
+    return render_template("test.html")
 
 
 

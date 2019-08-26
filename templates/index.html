@@ -21,16 +21,19 @@
     <!-- Featured Project Row -->
     <div class="row align-items-center no-gutters mb-4 mb-lg-5">
       <div class="col-xl-8 col-lg-7">
-        <img class="img-fluid mb-3 mb-lg-0" src="{{url_for('static',filename='img/bg-masthead.jpg')}}" alt="" />
+        <!-- <img class="img-fluid mb-3 mb-lg-0" src="{{url_for('static',filename='img/bg-masthead.jpg')}}" alt="" /> -->
+        {% for superhero in superheros %}
+        <img class="img-fluid mb-3 mb-lg-0" src="{{superhero.poster}}" alt="" />
       </div>
       <div class="col-xl-4 col-lg-5">
         <div class="featured-text text-center text-lg-left">
-          <h4>Shoreline</h4>
+            
+          <h4>{{superhero.name}}</h4>
           <p class="text-black-50 mb-0">
-            Grayscale is open source and MIT licensed. This means you can use it
-            for any project - even commercial projects! Download it, customize
-            it, and publish your website!
+            {{superhero.description}}
           </p>
+          <a href="{{url_for('viewsuperhero')}}"></a>
+          {% endfor %}
         </div>
       </div>
     </div>
