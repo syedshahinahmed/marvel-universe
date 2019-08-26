@@ -32,7 +32,7 @@ def contact():
 # View Superhero Route
 @app.route('/viewsuperhero')
 def viewsuperhero():
-    return render_template("viewchar.html", title='View Superhero')
+    return render_template("viewchar.html", title='View Superhero', superheros=mongo.db.superhero.find())
 
 # Add Superhero Route
 @app.route('/addsuperhero')

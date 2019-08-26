@@ -8,6 +8,12 @@
   border: 0;
 }
 
+.btn-small {
+  @extend .btn;
+  padding: 0.65rem 1rem;
+  font-size: 60%;
+}
+
 .btn-primary {
   background-color: $primary;
   &:hover {

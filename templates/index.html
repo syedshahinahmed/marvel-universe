@@ -6,51 +6,38 @@
     <div class="mx-auto text-center">
       <h1 class="mx-auto my-0 text-uppercase">Marvel Universe</h1>
       <h2 class="text-white-50 mx-auto mt-2 mb-5">
-        View, Add, Edit, Delate Marvel Superhero to Marverl Universe.
+        Feel free to view, add, edit, delate Marvel Superhero from Marverl Universe.
       </h2>
-      <a href="#projects" class="btn btn-primary js-scroll-trigger">Get Started</a>
+      <a href="#projects" class="btn btn-primary js-scroll-trigger"
+        >Get Started</a
+      >
     </div>
   </div>
 </header>
 
-
-
 <!-- Projects Section -->
 <section id="projects" class="projects-section bg-light">
   <div class="container">
-    <!-- Featured Project Row -->
-    <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-      <div class="col-xl-8 col-lg-7">
-        <!-- <img class="img-fluid mb-3 mb-lg-0" src="{{url_for('static',filename='img/bg-masthead.jpg')}}" alt="" /> -->
-        {% for superhero in superheros %}
-        <img class="img-fluid mb-3 mb-lg-0" src="{{superhero.poster}}" alt="" />
-      </div>
-      <div class="col-xl-4 col-lg-5">
-        <div class="featured-text text-center text-lg-left">
-            
-          <h4>{{superhero.name}}</h4>
-          <p class="text-black-50 mb-0">
-            {{superhero.description}}
-          </p>
-          <a href="{{url_for('viewsuperhero')}}"></a>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
+    {% for superhero in superheros %}
 
     <!-- Project One Row -->
     <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
       <div class="col-lg-6">
-        <img class="img-fluid" src="{{url_for('static',filename='img/demo-image-01.jpg')}}" alt="" />
+        <img
+          class="img-fluid"
+          src="{{url_for('static',filename='img/demo-image-01.jpg')}}"
+          alt="{{superhero.name}}"
+        />
       </div>
       <div class="col-lg-6">
         <div class="bg-black text-center h-100 project">
           <div class="d-flex h-100">
             <div class="project-text w-100 my-auto text-center text-lg-left">
-              <h4 class="text-white">Misty</h4>
+              <h4 class="text-white">{{superhero.name}}</h4>
               <p class="mb-0 text-white-50">
-                An example of where you can put an image of a project, or
-                anything else, along with a description.
+                <!-- An example of where you can put an image of a project, or
+                anything else, along with a description. -->
+                {{ superhero.description }}
               </p>
               <hr class="d-none d-lg-block mb-0 ml-0" />
             </div>
@@ -58,21 +45,23 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Project Two Row -->
     <div class="row justify-content-center no-gutters">
       <div class="col-lg-6">
-        <img class="img-fluid" src="{{url_for('static',filename='img/demo-image-02.jpg')}}" alt="" />
+        <img
+          class="img-fluid"
+          src="{{url_for('static',filename='img/demo-image-02.jpg')}}"
+          alt="{{superhero.name}}"
+        />
       </div>
       <div class="col-lg-6 order-lg-first">
         <div class="bg-black text-center h-100 project">
           <div class="d-flex h-100">
             <div class="project-text w-100 my-auto text-center text-lg-right">
-              <h4 class="text-white">Mountains</h4>
+              <h4 class="text-white">{{superhero.name}}</h4>
               <p class="mb-0 text-white-50">
-                Another example of a project with its respective description.
-                These sections work well responsively as well, try this theme on
-                a small screen!
+                {{ superhero.description }}
               </p>
               <hr class="d-none d-lg-block mb-0 mr-0" />
             </div>
@@ -80,7 +69,9 @@
         </div>
       </div>
     </div>
+    {% endfor %}
   </div>
+  
 </section>
 
 <!-- Signup Section -->
@@ -106,6 +97,5 @@
     </div>
   </div>
 </section>
-
 
 {% endblock %}
