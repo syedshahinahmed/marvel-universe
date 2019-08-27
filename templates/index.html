@@ -6,7 +6,8 @@
     <div class="mx-auto text-center">
       <h1 class="mx-auto my-0 text-uppercase">Marvel Universe</h1>
       <h2 class="text-white-50 mx-auto mt-2 mb-5">
-        Feel free to view, add, edit, delate Marvel Superhero from Marverl Universe.
+        Feel free to view, add, edit, delate Marvel Superhero from Marverl
+        Universe.
       </h2>
       <a href="#projects" class="btn btn-primary js-scroll-trigger"
         >Get Started</a
@@ -18,26 +19,22 @@
 <!-- Superhero Section -->
 <section id="projects" class="projects-section bg-light">
   <div class="container">
-    {% for superhero in superheros %}
-    
-    {% if loop.index %2 != 0 %}
+    {% for superhero in superheros %} {% if loop.index %2 != 0 %}
     <!-- Superhero One Row -->
     <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
       <div class="col-lg-6">
         <img
           class="img-fluid"
           src="{{url_for('static',filename='img/demo-image-01.jpg')}}"
-          alt="{{superhero.name}}"
+          alt="{{ superhero.name }}"
         />
       </div>
       <div class="col-lg-6">
         <div class="bg-black text-center h-100 project">
           <div class="d-flex h-100">
             <div class="project-text w-100 my-auto text-center text-lg-left">
-              <h4 class="text-white">{{ loop.index }} {{superhero.name}}</h4>
+              <h4 class="text-white">{{ loop.index }} {{ superhero.name }}</h4>
               <p class="mb-0 text-white-50">
-                <!-- An example of where you can put an image of a project, or
-                anything else, along with a description. -->
                 {{ superhero.description }}
               </p>
               <hr class="d-none d-lg-block mb-0 ml-0" />
@@ -46,23 +43,23 @@
         </div>
       </div>
     </div>
-    
+
     {% else %}
-   
+
     <!-- Superhero Two Row -->
     <div class="row justify-content-center no-gutters">
       <div class="col-lg-6">
         <img
           class="img-fluid"
           src="{{url_for('static',filename='img/demo-image-02.jpg')}}"
-          alt="{{superhero.name}}"
+          alt="{{ superhero.name }}"
         />
       </div>
       <div class="col-lg-6 order-lg-first">
         <div class="bg-black text-center h-100 project">
           <div class="d-flex h-100">
             <div class="project-text w-100 my-auto text-center text-lg-right">
-              <h4 class="text-white">{{ loop.index }} {{superhero.name}}</h4>
+              <h4 class="text-white">{{ loop.index }} {{ superhero.name }}</h4>
               <p class="mb-0 text-white-50">
                 {{ superhero.description }}
               </p>
@@ -72,11 +69,8 @@
         </div>
       </div>
     </div>
-    {% endif %}
-    
-    {% endfor %}
+    {% endif %} {% endfor %}
   </div>
-  
 </section>
 
 <!-- Signup Section -->
