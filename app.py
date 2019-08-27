@@ -30,19 +30,20 @@ def contact():
 
 
 # View Superhero Route
-@app.route('/viewsuperhero')
-def viewsuperhero():
-    return render_template("viewchar.html", title='View Superhero', superheros=mongo.db.superhero.find())
+@app.route('/viewsuperhero/<url_for>')
+def viewsuperhero(url_for):
+    marvel={}
+    return render_template("viewsuperhero.html", title='View Superhero', superheros=mongo.db.superhero.find())
 
 # Add Superhero Route
 @app.route('/addsuperhero')
 def addsuperhero():
-    return render_template("addchar.html", title='Add Superhero')
+    return render_template("addsuperhero.html", title='Add Superhero')
 
 # Edit Superhero Route
 @app.route('/editsuperhero')
 def editsuperhero():
-    return render_template("editchar.html", title='Edit Superhero')
+    return render_template("editsuperhero.html", title='Edit Superhero')
 
 # test 
 @app.route('/test')
