@@ -6,64 +6,82 @@
     <div class="row">
       <div class="col-md-10 col-lg-8 mx-auto text-center">
         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-        <h2 class="text-white mb-5">Add More Superhero's to Marvel Universe!</h2>
+        <h2 class="text-white mb-5">
+          Add More Superhero's to Marvel Universe!
+        </h2>
         <form action="" method="POST" class="form">
-          <label for="inputGroupName" class="text-white">Group Name</label>
+          <label for="group_name" class="text-white">Group Name</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-            id="inputGroupName"
+            id="group_name"
+            name="group_name"
             placeholder="Enter Group Name..."
           />
-          <label for="inputName" class="text-white">Name</label>
+          <label for="name" class="text-white mt-2">Name</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-            id="inputName"
+            id="name"
+            name="name"
             placeholder="Enter Superhero Name..."
           />
-          <label for="inputDescription" class="text-white">Description</label>
+          <label for="description" class="text-white mt-2">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="5"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+          ></textarea>
+
+          <label for="species" class="text-white mt-2">Species</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-            id="inputDescription"
-            placeholder="Enter Description..."
-          />
-          <label for="inputSpecies" class="text-white">Species</label>
-          <input
-            type="text"
-            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-            id="inputSpecies"
+            id="species"
+            name="species"
             placeholder="Enter Species Name..."
           />
-          <label for="inputSpecies" class="text-white">Gender </label>
+          <label for="gender" class="text-white mt-2">Gender </label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-            id="inputGender
-              "
+            id="gender"
+            name="gender"
             placeholder="Enter Gender..."
           />
-          <label for="inputAffiliation" class="text-white">Affiliation</label>
+          <label for="affiliation" class="text-white mt-2">Affiliation</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-            id="inputAffiliation"
+            id="affiliation"
+            name="affiliation"
             placeholder="Enter Affiliation..."
           />
-          <label for="inputStatus" class="text-white">Status</label>
+          <label for="status" class="text-white mt-2">Status</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-            id="inputStatus"
+            id="status"
+            name="status"
             placeholder="Enter Status..."
           />
-          <label for="inputPoster" class="text-white">Poster URL</label>
+          <label for="poster" class="text-white mt-2">Poster URL</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-            id="inputPoster"
+            id="poster"
+            name="poster"
             placeholder="Enter Poster URL..."
+          />
+          <label for="url_for" class="text-white mt-2">URL For</label>
+          <input
+            type="text"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+            id="url_for"
+            name="url_for"
+            placeholder="Please Give a Superhero URL Name without any space..."
           />
 
           <button type="submit" class="btn btn-primary mx-auto mt-4">
