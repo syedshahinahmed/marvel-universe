@@ -15,7 +15,6 @@ mongo = PyMongo(app)
 #### Route #####
 @app.route('/')
 def index():
-
     return render_template("index.html", superheros=mongo.db.superhero.find())
 
 # About Route
@@ -38,7 +37,19 @@ def viewsuperhero(url_for):
 # Add Superhero Route
 @app.route('/addsuperhero')
 def addsuperhero():
-    return render_template("addsuperhero.html", title='Add Superhero')
+    return render_template("addsuperhero.html", title='Add Superhero', superheros=mongo.db.superhero.find())
+
+# Insert Superhero Route
+@app.route("/insertsuoerhero", methods=['POST'])
+def insertsuoerhero():
+    # Connecting To Superhero Database
+    superheros = mongo.db.superhero
+
+    # Adding Form Data To Superhero Database 
+    superheros.insert_one(request.form.to_dict())
+    
+
+    return redirect(url_for('index'))
 
 # Edit Superhero Route
 @app.route('/editsuperhero')

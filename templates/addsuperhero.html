@@ -9,7 +9,11 @@
         <h2 class="text-white mb-5">
           Add More Superhero's to Marvel Universe!
         </h2>
-        <form action="" method="POST" class="form">
+        <form
+          action="{{ url_for('insertsuoerhero') }}"
+          method="POST"
+          class="form"
+        >
           <label for="group_name" class="text-white">Group Name</label>
           <input
             type="text"
@@ -46,7 +50,7 @@
           <label for="gender" class="text-white mt-2">Gender </label>
           <input
             type="text"
-            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
             id="gender"
             name="gender"
             placeholder="Enter Gender..."
