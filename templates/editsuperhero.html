@@ -1,28 +1,99 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
-<!-- Signup Section -->
 <section id="signup" class="signup-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 col-lg-8 mx-auto text-center">
-          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-          <h2 class="text-white mb-5">Edit Marvel Universe Superhero!</h2>
-  
-          <form class="form-inline d-flex">
-            <input
-              type="email"
-              class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-              id="inputEmail"
-              placeholder="Enter name of superhero..."
-            />
-            <button type="submit" class="btn btn-primary mx-auto">
-              Edit SuperHero
-            </button>
-          </form>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-lg-8 mx-auto text-center">
+        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+        <h2 class="text-white mb-5">
+          Edit Superhero's from Marvel Universe!
+        </h2>
+        <form
+          action="{{ url_for('insertsuoerhero') }}"
+          method="POST"
+          class="form"
+        >
+          <label for="group_name" class="text-white">Group Name</label>
+          <input
+            type="text"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+            id="group_name"
+            name="group_name"
+            placeholder="Enter Group Name..."
+          />
+          <label for="name" class="text-white mt-2">Name</label>
+          <input
+            type="text"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+            id="name"
+            name="name"
+            placeholder="Enter Superhero Name..."
+          />
+          <label for="description" class="text-white mt-2">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="5"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+          ></textarea>
+
+          <label for="species" class="text-white mt-2">Species</label>
+          <input
+            type="text"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+            id="species"
+            name="species"
+            placeholder="Enter Species Name..."
+          />
+          <label for="gender" class="text-white mt-2">Gender </label>
+          <input
+            type="text"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
+            id="gender"
+            name="gender"
+            placeholder="Enter Gender..."
+          />
+          <label for="affiliation" class="text-white mt-2">Affiliation</label>
+          <input
+            type="text"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+            id="affiliation"
+            name="affiliation"
+            placeholder="Enter Affiliation..."
+          />
+          <label for="status" class="text-white mt-2">Status</label>
+          <input
+            type="text"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+            id="status"
+            name="status"
+            placeholder="Enter Status..."
+          />
+          <label for="poster" class="text-white mt-2">Poster URL</label>
+          <input
+            type="text"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+            id="poster"
+            name="poster"
+            placeholder="Enter Poster URL..."
+          />
+          <label for="url_for" class="text-white mt-2">URL For</label>
+          <input
+            type="text"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+            id="url_for"
+            name="url_for"
+            placeholder="Please Give a Superhero URL Name without any space..."
+          />
+
+          <button type="submit" class="btn btn-primary mx-auto mt-4">
+            Edit Superhero
+          </button>
+        </form>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
+
 {% endblock %}
