@@ -40,9 +40,16 @@
                 {{ superhero.description }}
               </p>
               <hr class="d-none d-lg-block mb-0 ml-0" />
-              <a href="{{url_for('editsuperhero')}}" class="btn btn-primary mx-auto float-left mt-2">X</a>
-              <a href="{{url_for('addsuperhero')}}" class="btn btn-primary mx-auto float-right mt-2">Edit</a>
-              
+              <a
+                href="{{url_for('edit', superhero_id=superhero._id)}}"
+                class="btn btn-primary mx-auto float-left mt-2"
+                >X</a
+              >
+              <a
+                href="{{ url_for('addsuperhero') }}"
+                class="btn btn-primary mx-auto float-right mt-2"
+                >Add</a
+              >
             </div>
           </div>
         </div>
@@ -73,6 +80,16 @@
                 {{ superhero.description }}
               </p>
               <hr class="d-none d-lg-block mb-0 mr-0" />
+              <a
+                href="{{url_for('edit', superhero_id=superhero._id)}}"
+                class="btn btn-primary mx-auto float-left mt-2"
+                >X</a
+              >
+              <a
+                href="{{ url_for('addsuperhero') }}"
+                class="btn btn-primary mx-auto float-right mt-2"
+                >Add</a
+              >
             </div>
           </div>
         </div>
