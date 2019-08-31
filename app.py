@@ -61,16 +61,19 @@ def edit(superhero_id):
 # View Individual Superhero Route
 @app.route('/viewsuperhero/<superhero_id>')
 def viewsuperhero(superhero_id):
+    # Finding Individual Superhero From Superhero Database
     the_superhero = mongo.db.superhero.find_one(
         {'_id': ObjectId(superhero_id)})
-    all_group = mongo.db.fav_superhero.find()
-    return render_template("viewsuperhero.html", title='View Superhero', superhero=the_superhero, group=all_group)
+    return render_template("viewsuperhero.html", title='View Superhero', superhero=the_superhero)
 
 
 # Updating Individual Superhero
 @app.route("/updatesuperhero/<superhero_id>", methods=["POST"])
 def updatesuperhero(superhero_id):
+    # Connecting To Superhero Database
     superheros = mongo.db.superhero
+
+    # Getting Data From Superhero Database And Updating
     superheros.update({'_id': ObjectId(superhero_id)}, {
         "group_name": request.form.get("group_name"),
         "name": request.form.get("name"),
@@ -80,7 +83,7 @@ def updatesuperhero(superhero_id):
         "affiliation": request.form.get("affiliation"),
         "status": request.form.get("status"),
         "poster": request.form.get("poster"),
-        "superpowers": request.form.get("superpowers")
+        "powers_and_abilities": request.form.get("powers_and_abilities")
     })
     return redirect(url_for("index"))
 
@@ -90,6 +93,7 @@ def updatesuperhero(superhero_id):
 def deletesuperhero(superhero_id):
     mongo.db.superhero.remove({'_id': ObjectId(superhero_id)})
     return redirect(url_for('index'))
+
 
 #####################
 #### Deployment #####

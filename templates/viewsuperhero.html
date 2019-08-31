@@ -1,6 +1,93 @@
-{% extends 'base.html' %} 
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
-<h1>{{superhero.name}}</h1>
+<!-- Header -->
+<!-- <header class="masthead">
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase">Marvel Universe</h1>
+      <h2 class="text-white-50 mx-auto mt-2 mb-5">
+       Welcome to the Marvel Universe Wiki
+      </h2>
+      <a href="#projects" class="btn btn-primary js-scroll-trigger"
+        >Get Started</a
+      >
+    </div>
+  </div>
+</header> -->
 
+<!-- Superhero Section -->
+<section id="projects" class="projects-section bg-dark">
+  <div class="container">
+    <!-- Superhero Row -->
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+      <h2 class="text-center text-white-50">
+        Marvel Avengers: {{ superhero.name }}
+      </h2>
+      <div class="col-lg-12">
+        <img
+          class="img-fluid"
+          src="{{ superhero.poster }}"
+          alt="{{ superhero.name }}"
+        />
+      </div>
+      <div class="col-lg-12">
+        <div class="bg-black text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-left">
+              <h4 class="text-white">
+                <a
+                  href="{{url_for('viewsuperhero', superhero_id=superhero._id)}}"
+                >
+                  {{ superhero.name }}</a
+                >
+              </h4>
+              <p class="mb-0 text-white-50">
+                {{ superhero.description }}
+              </p>
+              <hr class="d-none d-lg-block mb-0 ml-0" />
+              <!-- <a
+                href="{{url_for('deletesuperhero', superhero_id=superhero._id)}}"
+                class="btn btn-primary mx-auto float-left mt-2"
+                >X</a
+              > -->
+              <!-- <a
+                href="{{url_for('edit', superhero_id=superhero._id)}}"
+                class="btn btn-primary mx-auto float-right mt-2"
+                >Edit</a
+              > -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+      <div class="col-md-12">
+        <ul class="list-group">
+          <li class="list-group-item active">{{ superhero.name }}</li>
+          <li class="list-group-item  list-group-item-secondary">
+            {{ superhero.name }}
+          </li>
+          <li class="list-group-item list-group-item-success">
+            {{ superhero.name }}
+          </li>
+          <li class="list-group-item list-group-item-danger">
+            {{ superhero.name }}
+          </li>
+          <li class="list-group-item list-group-item-warning">
+            {{ superhero.name }}
+          </li>
+          <li class="list-group-item list-group-item-info">
+            {{ superhero.name }}
+          </li>
+          <li class="list-group-item list-group-item-light">
+            {{ superhero.name }}
+          </li>
+          <li class="list-group-item list-group-item-dark">
+            {{ superhero.name }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}
