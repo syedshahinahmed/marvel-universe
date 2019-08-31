@@ -6,8 +6,7 @@
     <div class="mx-auto text-center">
       <h1 class="mx-auto my-0 text-uppercase">Marvel Universe</h1>
       <h2 class="text-white-50 mx-auto mt-2 mb-5">
-        Feel free to view, add, edit, delate Marvel Superhero from Marverl
-        Universe.
+       Welcome to the Marvel Universe Wiki
       </h2>
       <a href="#projects" class="btn btn-primary js-scroll-trigger"
         >Get Started</a
@@ -23,11 +22,17 @@
     <!-- Superhero One Row -->
     <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
       <div class="col-lg-6">
-        <img
+        <!-- <img
           class="img-fluid"
           src="{{url_for('static',filename='img/demo-image-01.jpg')}}"
           alt="{{ superhero.name }}"
+        /> -->
+        <img
+          class="img-fluid"
+          src="{{ superhero.poster }}"
+          alt="{{ superhero.name }}"
         />
+       
       </div>
       <div class="col-lg-6">
         <div class="bg-black text-center h-100 project">
@@ -63,7 +68,7 @@
       <div class="col-lg-6">
         <img
           class="img-fluid"
-          src="{{url_for('static',filename='img/demo-image-02.jpg')}}"
+          src="{{ superhero.poster }}"
           alt="{{ superhero.name }}"
         />
       </div>
@@ -96,6 +101,34 @@
       </div>
     </div>
     {% endif %} {% endfor %}
+      <div class="row justify-content-center no-gutters">
+        <div class="col-sm-12 mt-2">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <p class="mb-0 text-white-50 text-capitalize">
+                  We are currently managing lots of articles, and we could use your help
+                  to make many more. We hope that you will add to the site!
+                </p>
+                <p class="mb-0 text-white-50 text-capitalize">
+                  Haven't Found The Superhero you are looking for? Why don't you add your favourite superhero to our wiki.
+                </p>
+               
+                <hr class="d-none d-lg-block mb-0 mr-0" />
+               
+                <a
+                  href="{{ url_for('addsuperhero') }}"
+                  class="btn btn-primary mx-auto float-right mt-2"
+                  >Add Superhero</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </section>
 
@@ -105,7 +138,7 @@
     <div class="row">
       <div class="col-md-10 col-lg-8 mx-auto text-center">
         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+        <h2 class="text-white mb-5">Subscribe to receive the latest updates!</h2>
 
         <form class="form-inline d-flex">
           <input
