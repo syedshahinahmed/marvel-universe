@@ -7,10 +7,10 @@
       <div class="col-md-10 col-lg-8 mx-auto text-center">
         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
         <h2 class="text-white mb-5">
-          Edit {{superhero.name}}'s Details from Marvel Universe!
+          Edit {{ superhero.name }}'s details from Marvel Universe!
         </h2>
         <form
-          action="{{ url_for('insertsuoerhero') }}"
+          action="{{ url_for('updatesuperhero', superhero_id=superhero._id) }}"
           method="POST"
           class="form"
         >
@@ -19,8 +19,8 @@
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="group_name"
-            name="group_name" value="{{superhero.group_name}}"
-            
+            name="group_name"
+            value="{{ superhero.group_name }}"
           />
           <label for="name" class="text-white mt-2">Name</label>
           <input
@@ -28,7 +28,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="name"
             name="name"
-            value="{{superhero.name}}"
+            value="{{ superhero.name }}"
           />
           <label for="description" class="text-white mt-2">Description</label>
           <textarea
@@ -37,7 +37,8 @@
             cols="30"
             rows="5"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-          >{{superhero.description}}</textarea>
+            >{{ superhero.description }}</textarea
+          >
 
           <label for="species" class="text-white mt-2">Species</label>
           <input
@@ -45,7 +46,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="species"
             name="species"
-            value="{{superhero.species}}"
+            value="{{ superhero.species }}"
           />
           <label for="gender" class="text-white mt-2">Gender </label>
           <input
@@ -53,7 +54,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
             id="gender"
             name="gender"
-            value="{{superhero.gender}}"
+            value="{{ superhero.gender }}"
           />
           <label for="affiliation" class="text-white mt-2">Affiliation</label>
           <input
@@ -61,7 +62,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="affiliation"
             name="affiliation"
-            value="{{superhero.affiliation}}"
+            value="{{ superhero.affiliation }}"
           />
           <label for="status" class="text-white mt-2">Status</label>
           <input
@@ -69,7 +70,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="status"
             name="status"
-            value="{{superhero.affiliation}}"
+            value="{{ superhero.status }}"
           />
           <label for="poster" class="text-white mt-2">Poster URL</label>
           <input
@@ -77,7 +78,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="poster"
             name="poster"
-            value="{{superhero.affiliation}}"
+            value="{{ superhero.poster }}"
           />
           <label for="superpowers" class="text-white mt-2">Superpowers</label>
           <input
@@ -85,9 +86,8 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="superpowers"
             name="superpowers"
-            value="{{superhero.superpowers}}"
+            value="{{ superhero.superpowers }}"
           />
-
 
           <button type="submit" class="btn btn-primary mx-auto mt-4">
             Edit Superhero

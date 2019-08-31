@@ -63,23 +63,22 @@ def viewsuperhero(superhero_id):
     return render_template("viewsuperhero.html", title='View Superhero', superhero=the_superhero, group=all_group)
 
 # Updating Individual Superhero
-@app.route('/updateSuperhero/<superhero_id>', methods=["POST"])
-def updateSuperhero(superhero_id):
+@app.route("/updatesuperhero/<superhero_id>", methods=["POST"])
+def updatesuperhero(superhero_id):
     superheros = mongo.db.superhero
     superheros.update({'_id': ObjectId(superhero_id)}, {
-        "group_name":request.form.get["group_name"],
-        "name":request.form.get["name"],
-        "description":request.form.get["description"],
-        "species":request.form.get["species"],
-        "gender":request.form.get["gender"],
-        "affiliation":request.form.get["affiliation"],
-        "status":request.form.get["status"],
-        "poster":request.form.get["poster"],
-        "superpowers":request.form.get["superpowers"]
+        "group_name": request.form.get("group_name"),
+        "name": request.form.get("name"),
+        "description": request.form.get("description"),
+        "species": request.form.get("species"),
+        "gender": request.form.get("gender"),
+        "affiliation": request.form.get("affiliation"),
+        "status": request.form.get("status"),
+        "poster": request.form.get("poster"),
+        "superpowers": request.form.get("superpowers")
     })
-    return redirect(url_for(index))
+    return redirect(url_for("index"))
 
- 
 
 #####################
 #### Deployment #####

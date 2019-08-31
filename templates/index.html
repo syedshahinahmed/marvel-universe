@@ -46,15 +46,16 @@
               </p>
               <hr class="d-none d-lg-block mb-0 ml-0" />
               <a
-                href="{{url_for('edit', superhero_id=superhero._id)}}"
+                href="{{url_for('deletesuperhero', superhero_id=superhero._id)}}"
                 class="btn btn-primary mx-auto float-left mt-2"
                 >X</a
               >
               <a
-                href="{{ url_for('addsuperhero') }}"
+                href="{{url_for('edit', superhero_id=superhero._id)}}"
                 class="btn btn-primary mx-auto float-right mt-2"
-                >Add</a
+                >Edit</a
               >
+              
             </div>
           </div>
         </div>
@@ -86,14 +87,14 @@
               </p>
               <hr class="d-none d-lg-block mb-0 mr-0" />
               <a
-                href="{{url_for('edit', superhero_id=superhero._id)}}"
+                href="{{url_for('deletesuperhero', superhero_id=superhero._id)}}"
                 class="btn btn-primary mx-auto float-left mt-2"
                 >X</a
               >
               <a
-                href="{{ url_for('addsuperhero') }}"
+                href="{{url_for('edit', superhero_id=superhero._id)}}"
                 class="btn btn-primary mx-auto float-right mt-2"
-                >Add</a
+                >Edit</a
               >
             </div>
           </div>
