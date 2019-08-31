@@ -39,7 +39,7 @@
           <div class="d-flex h-100">
             <div class="project-text w-100 my-auto text-center text-lg-left">
               <h4 class="text-white">
-                <a href="">{{ loop.index }}. {{ superhero.name }}</a>
+                <a href="{{url_for('viewsuperhero', superhero_id=superhero._id)}}">{{ loop.index }}. {{ superhero.name }}</a>
               </h4>
               <p class="mb-0 text-white-50">
                 {{ superhero.description }}
@@ -77,7 +77,7 @@
           <div class="d-flex h-100">
             <div class="project-text w-100 my-auto text-center text-lg-right">
               <h4 class="text-white">
-                <a href="/viewsuperhero/{{ superhero.url_for }}"
+                <a href="{{url_for('viewsuperhero', superhero_id=superhero._id)}}"
                   >{{ loop.index }}. {{ superhero.name }}</a
                 >
               </h4>
@@ -157,3 +157,4 @@
 </section>
 
 {% endblock %}
+<!-- /viewsuperhero/{{ superhero.url_for }} -->
