@@ -14,9 +14,12 @@ mongo = PyMongo(app)
 
 ################
 #### Route #####
+
+# Home Route
 @app.route('/')
 def index():
     return render_template("index.html", superheros=mongo.db.superhero.find())
+
 
 # About Route
 @app.route('/about')
@@ -33,6 +36,7 @@ def contact():
 @app.route('/addsuperhero')
 def addsuperhero():
     return render_template("addsuperhero.html", title='Add Superhero', superheros=mongo.db.superhero.find())
+
 
 # Insert Superhero Route
 @app.route("/insertsuoerhero", methods=['POST'])
@@ -62,6 +66,7 @@ def viewsuperhero(superhero_id):
     all_group = mongo.db.fav_superhero.find()
     return render_template("viewsuperhero.html", title='View Superhero', superhero=the_superhero, group=all_group)
 
+
 # Updating Individual Superhero
 @app.route("/updatesuperhero/<superhero_id>", methods=["POST"])
 def updatesuperhero(superhero_id):
@@ -79,6 +84,12 @@ def updatesuperhero(superhero_id):
     })
     return redirect(url_for("index"))
 
+
+# Delete a Superhero from Database
+@app.route('/deletesuperhero/<superhero_id>')
+def deletesuperhero(superhero_id):
+    mongo.db.superhero.remove({'_id': ObjectId(superhero_id)})
+    return redirect(url_for('index'))
 
 #####################
 #### Deployment #####
