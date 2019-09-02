@@ -18,9 +18,8 @@
 <!-- Superhero Section -->
 <section id="projects" class="projects-section bg-dark">
   <div class="container">
-    <!-- Superhero Row -->
     <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-      <h2 class="text-center text-white-50">
+      <h2 class="text-center text-white">
         Marvel Avengers: {{ superhero.name }}
       </h2>
       <div class="col-lg-12">
@@ -34,60 +33,47 @@
         <div class="bg-black text-center h-100 project">
           <div class="d-flex h-100">
             <div class="project-text w-100 my-auto text-center text-lg-left">
-              <h4 class="text-white">
-                <a
-                  href="{{url_for('viewsuperhero', superhero_id=superhero._id)}}"
-                >
-                  {{ superhero.name }}</a
-                >
-              </h4>
-              <p class="mb-0 text-white-50">
-                {{ superhero.description }}
-              </p>
-              <hr class="d-none d-lg-block mb-0 ml-0" />
-              <!-- <a
-                href="{{url_for('deletesuperhero', superhero_id=superhero._id)}}"
-                class="btn btn-primary mx-auto float-left mt-2"
-                >X</a
-              > -->
-              <!-- <a
-                href="{{url_for('edit', superhero_id=superhero._id)}}"
-                class="btn btn-primary mx-auto float-right mt-2"
-                >Edit</a
-              > -->
+                <p class="text-white">
+                    Group Name: <span class="text-primary">{{ superhero.group_name }}</span> 
+                  </p>
+                  <p class="text-white">
+                    Description: <span class="text-white-50">{{ superhero.description }}</span> 
+                  </p>
+                  <p class="text-white">
+                    Species: <span class="text-success">{{ superhero.species }}</span> 
+                  </p>
+                  <p class="text-white">
+                    Gender: <span class="text-danger">{{ superhero.gender }}</span>
+                  </p>
+                  <p class="text-white">
+                    Affiliation: <span class="text-warning">{{ superhero.affiliation }}</span>
+                  </p>
+                  <p class="text-white">
+                    Status: <span class="text-info">{{ superhero.status }}</span>
+                  </p>
+                  <p class="text-white">
+                    Powers and abilities: <span class="text-light">{{ superhero.powers_and_abilities }}</span>
+                  </p>
+      
+            </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-      <div class="col-md-12">
-        <ul class="list-group">
-          <li class="list-group-item active">{{ superhero.name }}</li>
-          <li class="list-group-item  list-group-item-secondary">
-            {{ superhero.name }}
-          </li>
-          <li class="list-group-item list-group-item-success">
-            {{ superhero.name }}
-          </li>
-          <li class="list-group-item list-group-item-danger">
-            {{ superhero.name }}
-          </li>
-          <li class="list-group-item list-group-item-warning">
-            {{ superhero.name }}
-          </li>
-          <li class="list-group-item list-group-item-info">
-            {{ superhero.name }}
-          </li>
-          <li class="list-group-item list-group-item-light">
-            {{ superhero.name }}
-          </li>
-          <li class="list-group-item list-group-item-dark">
-            {{ superhero.name }}
-          </li>
-        </ul>
+
+      <hr>
+
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-md-12">
+          <h2 class="text-white-50 text-center mt-2">Movies </h2>
+            
+        </div>
       </div>
+
     </div>
   </div>
 </section>
+
+
+
 {% endblock %}

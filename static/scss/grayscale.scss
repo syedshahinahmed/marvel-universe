@@ -13,6 +13,12 @@ html, body {
   letter-spacing: 0.0625em;
 }
 
+hr {
+  border-color: #64a19d;
+  border-width: .25rem;
+}
+
+
 a {
   color: $primary;
   &:focus,

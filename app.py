@@ -24,7 +24,18 @@ def index():
 # About Route
 @app.route('/about')
 def about():
-    return render_template("about.html", title='About', superheros=mongo.db.superhero.find())
+    # Phase One
+    p1 = mongo.db.movies.find({"phase": "Phase One"})
+    # Phase Two
+    p2 = mongo.db.movies.find({"phase": "Phase Two"})
+    # Phase Three
+    p3 = mongo.db.movies.find({"phase": "Phase Three"})
+
+    # Phase Four
+    # p4 = mongo.db.movies.find({"phase": "Phase Four"})
+
+    return render_template("about.html", title='About', phaseone=p1, phasetwo=p2, phasethree=p3)
+
 
 # Contact Route
 @app.route('/contact')
@@ -53,7 +64,8 @@ def insertsuoerhero():
 # Edit Superhero Route
 @app.route("/edit/<superhero_id>")
 def edit(superhero_id):
-    the_superhero = mongo.db.superhero.find_one({'_id': ObjectId(superhero_id)})
+    the_superhero = mongo.db.superhero.find_one(
+        {'_id': ObjectId(superhero_id)})
     all_group = mongo.db.fav_superhero.find()
     return render_template('edit.html', title="Edit", superhero=the_superhero, group=all_group)
 
@@ -100,5 +112,3 @@ def deletesuperhero(superhero_id):
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-

@@ -12,11 +12,11 @@
         </p>
       </div>
     </div>
-    <img
+    <!-- <img
       src="{{url_for('static',filename='img/ipad.png')}}"
       class="img-fluid"
       alt=""
-    />
+    /> -->
   </div>
 
   <!-- PHASE ONE -->
@@ -25,11 +25,16 @@
       PHASE ONE
     </h2>
     <div class="row">
+      {% for p1 in phaseone %}
       <div class="col-md-4">
         <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
+          <img
+            src="http://image.tmdb.org/t/p/w500{{ p1.poster_path }}"
+            class="card-img-top"
+            alt="{{ p1.title }}"
+          />
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">{{ p1.title }}</h5>
             <a href="#" class="btn btn-primary btn-small float-left"
               >View Info</a
             >
@@ -37,80 +42,26 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
-              >View Info</a
-            >
-            <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
-              >View Info</a
-            >
-            <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
-              >View Info</a
-            >
-            <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
-              >View Info</a
-            >
-            <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
-              >View Info</a
-            >
-            <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 
   <!-- PHASE TWO -->
   <div class="container">
     <h2 class="text-white mb-4 text-uppercase">
-      PHASE ONE
+      PHASE TWO
     </h2>
     <div class="row">
+      {% for p2 in phasetwo %}
       <div class="col-md-4">
         <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
+          <img
+            src="http://image.tmdb.org/t/p/w500{{ p2.poster_path }}"
+            class="card-img-top"
+            alt="{{ p2.title }}"
+          />
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">{{ p2.title }}</h5>
             <a href="#" class="btn btn-primary btn-small float-left"
               >View Info</a
             >
@@ -118,11 +69,26 @@
           </div>
         </div>
       </div>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- PHASE THREE -->
+
+  <div class="container">
+    <h2 class="text-white mb-4 text-uppercase">
+      PHASE Three
+    </h2>
+    <div class="row">
+      {% for p3 in phasethree %}
       <div class="col-md-4">
         <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
+          <img
+            src="http://image.tmdb.org/t/p/w500{{ p3.poster_path }}"
+            class="card-img-top"
+            alt="{{ p3.title }}"
+          />
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">{{ p3.title }}</h5>
             <a href="#" class="btn btn-primary btn-small float-left"
               >View Info</a
             >
@@ -130,136 +96,13 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
-              >View Info</a
-            >
-            <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
-              >View Info</a
-            >
-            <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
-              >View Info</a
-            >
-            <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
-              >View Info</a
-            >
-            <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 
-  <!-- PHASE THREE -->
-  <div class="container">
-    <h2 class="text-white mb-4 text-uppercase">
-      PHASE ONE
-    </h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
-              >View Info</a
-            >
-            <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
-              >View Info</a
-            >
-            <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
-              >View Info</a
-            >
-            <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
-              >View Info</a
-            >
-            <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
-              >View Info</a
-            >
-            <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mx-auto mb-3" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
-              >View Info</a
-            >
-            <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- PHASE FOUR -->
+
+  
+
 </section>
 {% endblock %}
