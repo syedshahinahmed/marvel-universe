@@ -33,47 +33,69 @@
         <div class="bg-black text-center h-100 project">
           <div class="d-flex h-100">
             <div class="project-text w-100 my-auto text-center text-lg-left">
-                <p class="text-white">
-                    Group Name: <span class="text-primary">{{ superhero.group_name }}</span> 
-                  </p>
-                  <p class="text-white">
-                    Description: <span class="text-white-50">{{ superhero.description }}</span> 
-                  </p>
-                  <p class="text-white">
-                    Species: <span class="text-success">{{ superhero.species }}</span> 
-                  </p>
-                  <p class="text-white">
-                    Gender: <span class="text-danger">{{ superhero.gender }}</span>
-                  </p>
-                  <p class="text-white">
-                    Affiliation: <span class="text-warning">{{ superhero.affiliation }}</span>
-                  </p>
-                  <p class="text-white">
-                    Status: <span class="text-info">{{ superhero.status }}</span>
-                  </p>
-                  <p class="text-white">
-                    Powers and abilities: <span class="text-light">{{ superhero.powers_and_abilities }}</span>
-                  </p>
-      
-            </div>
+              <p class="text-white">
+                Group Name:
+                <span class="text-primary">{{ superhero.group_name }}</span>
+              </p>
+              <p class="text-white">
+                Description:
+                <span class="text-white-50">{{ superhero.description }}</span>
+              </p>
+              <p class="text-white">
+                Species:
+                <span class="text-success">{{ superhero.species }}</span>
+              </p>
+              <p class="text-white">
+                Gender: <span class="text-danger">{{ superhero.gender }}</span>
+              </p>
+              <p class="text-white">
+                Affiliation:
+                <span class="text-warning">{{ superhero.affiliation }}</span>
+              </p>
+              <p class="text-white">
+                Status: <span class="text-info">{{ superhero.status }}</span>
+              </p>
+              <p class="text-white">
+                Powers and abilities:
+                <span class="text-light">{{
+                  superhero.powers_and_abilities
+                }}</span>
+              </p>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <hr />
+    <!--Movies-->
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+      <div class="col-md-12">
+        <h2 class="text-white text-center mt-2">Movies Collection</h2>
+      </div>
+    </div>
 
-      <hr>
-
-      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-        <div class="col-md-12">
-          <h2 class="text-white-50 text-center mt-2">Movies </h2>
-            
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        {% for p1 in movies %}
+        <div class="col-md-4">
+          <div class="card mx-auto mb-3" style="width: 18rem;">
+            <img
+              src="http://image.tmdb.org/t/p/w500{{ p1.poster_path }}"
+              class="card-img-top"
+              alt="{{ p1.title }}"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ p1.title }}</h5>
+              <a href="#" class="btn btn-primary btn-small float-left"
+                >View Info</a
+              >
+              <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
+            </div>
+          </div>
         </div>
+        {% endfor %}
       </div>
 
-    </div>
   </div>
 </section>
-
-
 
 {% endblock %}

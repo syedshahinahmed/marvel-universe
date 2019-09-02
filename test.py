@@ -30,7 +30,7 @@ def about():
     p2 = mongo.db.movies.find({"phase": "Phase Two"})
     # Phase Three
     p3 = mongo.db.movies.find({"phase": "Phase Three"})
-    
+
     # Phase Four
     # p4 = mongo.db.movies.find({"phase": "Phase Four"})
 
@@ -75,7 +75,11 @@ def viewsuperhero(superhero_id):
     # Finding Individual Superhero From Superhero Database
     the_superhero = mongo.db.superhero.find_one(
         {'_id': ObjectId(superhero_id)})
-    return render_template("viewsuperhero.html", title='View Superhero', superhero=the_superhero)
+
+    # Iron Man Movies
+    irmv = mongo.db.movies.find({"collection_name": "Iron Man Collection"})
+
+    return render_template("viewsuperhero.html", title='View Superhero', superhero=the_superhero, movies=irmv)
 
 
 # Updating Individual Superhero
@@ -105,9 +109,16 @@ def deletesuperhero(superhero_id):
     mongo.db.superhero.remove({'_id': ObjectId(superhero_id)})
     return redirect(url_for('index'))
 
+# View Movies
+@app.route("/movie/<movie_id>")
+def movie(movie_id):
+    the_movie = mongo.db.movies.find_one(
+        {'_id': ObjectId(movie_id)})
+    return render_template('movies.html', movie=the_movie)
 
 #####################
 #### Deployment #####
+
 
 if __name__ == "__main__":
     app.run(debug=True)

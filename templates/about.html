@@ -35,7 +35,7 @@
           />
           <div class="card-body">
             <h5 class="card-title">{{ p1.title }}</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
+            <a href="{{url_for('movie', movie_id=p1._id)}}" class="btn btn-primary btn-small float-left"
               >View Info</a
             >
             <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
@@ -62,7 +62,7 @@
           />
           <div class="card-body">
             <h5 class="card-title">{{ p2.title }}</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
+            <a href="{{url_for('movie', movie_id=p2._id)}}" class="btn btn-primary btn-small float-left"
               >View Info</a
             >
             <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
@@ -89,7 +89,7 @@
           />
           <div class="card-body">
             <h5 class="card-title">{{ p3.title }}</h5>
-            <a href="#" class="btn btn-primary btn-small float-left"
+            <a href="{{url_for('movie', movie_id=p3._id)}}" class="btn btn-primary btn-small float-left"
               >View Info</a
             >
             <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
