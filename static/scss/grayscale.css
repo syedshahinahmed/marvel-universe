@@ -294,6 +294,11 @@ hr {
   border-width: .25rem;
 }
 
+u {
+  -webkit-text-decoration-color: darkgoldenrod;
+          text-decoration-color: darkgoldenrod;
+}
+
 a {
   color: #64a19d;
 }
