@@ -113,9 +113,6 @@ def movie(movie_id):
     # Finding Individual Movie From movies Database
     the_movie = mongo.db.movies.find_one(
         {'_id': ObjectId(movie_id)})
-
-    # Finding All Movies From Movies Database
-    view_movie = mongo.db.movies.find()
     return render_template('movies.html', movie=the_movie)
 
 
