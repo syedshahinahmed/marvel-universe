@@ -7,13 +7,14 @@
       <div class="col-md-10 col-lg-8 mx-auto text-center">
         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
         <h2 class="text-white mb-5">
-          Edit a Superhero from Marvel Universe!
+          Add a Superhero to Marvel Universe!
         </h2>
         <form
-          action="{{ url_for('insertsuoerhero') }}"
+          action="{{ url_for('insertsuperhero') }}"
           method="POST"
           class="form"
         >
+          <!-- Group Name -->
           <label for="group_name" class="text-white">Group Name</label>
           <input
             type="text"
@@ -22,23 +23,52 @@
             name="group_name"
             placeholder="Enter Group Name..."
           />
+
+          <!-- Real Name -->
+          <label for="real_name" class="text-white mt-2">Real Name</label>
+          <input
+            type="text"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+            id="real_name"
+            name="real_name"
+            placeholder="Enter Superhero's Real Name..."
+          />
+
+          <!-- Name -->
           <label for="name" class="text-white mt-2">Name</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="name"
             name="name"
-            placeholder="Enter Superhero Name..."
+            placeholder="Enter Superhero's Name..."
           />
-          <label for="description" class="text-white mt-2">Description</label>
+
+          <!-- Short Description -->
+          <label for="short_description" class="text-white mt-2"
+            >Short Description</label
+          >
           <textarea
-            name="description"
-            id="description"
+            name="short_description"
+            id="short_description"
             cols="30"
             rows="5"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
           ></textarea>
 
+          <!-- Long Description -->
+          <label for="long_description" class="text-white mt-2"
+            >Long Description</label
+          >
+          <textarea
+            name="long_description"
+            id="long_description"
+            cols="30"
+            rows="5"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+          ></textarea>
+
+          <!-- Species -->
           <label for="species" class="text-white mt-2">Species</label>
           <input
             type="text"
@@ -47,7 +77,9 @@
             name="species"
             placeholder="Enter Species Name..."
           />
-          <label for="gender" class="text-white mt-2">Gender </label>
+
+          <!-- Gender -->
+          <label for="gender" class="text-white mt-2">Gender</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
@@ -55,6 +87,8 @@
             name="gender"
             placeholder="Enter Gender..."
           />
+
+          <!-- Affiliation -->
           <label for="affiliation" class="text-white mt-2">Affiliation</label>
           <input
             type="text"
@@ -63,6 +97,8 @@
             name="affiliation"
             placeholder="Enter Affiliation..."
           />
+
+          <!-- Status -->
           <label for="status" class="text-white mt-2">Status</label>
           <input
             type="text"
@@ -71,6 +107,8 @@
             name="status"
             placeholder="Enter Status..."
           />
+
+          <!-- Poster URL -->
           <label for="poster" class="text-white mt-2">Poster URL</label>
           <input
             type="text"
@@ -79,17 +117,114 @@
             name="poster"
             placeholder="Enter Poster URL..."
           />
-          <label for="url_for" class="text-white mt-2">URL For</label>
+
+          <!-- Powers One -->
+          <label for="p1" class="text-white mt-2">Powers One</label>
+          <textarea
+            name="p1"
+            id="p1"
+            cols="20"
+            rows="3"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+          ></textarea>
+
+          <!-- Powers Two -->
+          <label for="p2" class="text-white mt-2">Powers Two</label>
+          <textarea
+            name="p2"
+            id="p2"
+            cols="20"
+            rows="3"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+          ></textarea>
+
+          <!-- Powers Three -->
+          <label for="p3" class="text-white mt-2">Powers Three</label>
+          <textarea
+            name="p3"
+            id="p3"
+            cols="20"
+            rows="3"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+          ></textarea>
+
+          <!-- Other Abilities -->
+          <label for="other_powers" class="text-white mt-2">Other Powers</label>
+          <textarea
+            name="other_powers"
+            id="other_powers"
+            cols="05"
+            rows="2"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+          ></textarea>
+
+          <!-- Abilities One -->
+          <label for="a1" class="text-white mt-2">Abilities One</label>
+          <textarea
+            name="a1"
+            id="a1"
+            cols="20"
+            rows="3"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+          ></textarea>
+
+          <!-- Abilities Two -->
+          <label for="a2" class="text-white mt-2">Abilities Two</label>
+          <textarea
+            name="a2"
+            id="a2"
+            cols="20"
+            rows="3"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+          ></textarea>
+
+          <!-- Abilities Three -->
+          <label for="a3" class="text-white mt-2">Abilities Three</label>
+          <textarea
+            name="a3"
+            id="a3"
+            cols="20"
+            rows="3"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+          ></textarea>
+
+          <!-- Other Abilities -->
+          <label for="other_abilities" class="text-white mt-2"
+            >Other Abilities</label
+          >
+          <textarea
+          name="other_abilities"
+          id="other_abilities"
+          cols="05"
+          rows="2"
+          class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+        ></textarea>
+
+          <!-- URL For URL For Merchandise -->
+          <label for="shop_link" class="text-white mt-2"
+            >URL For Merchandise</label
+          >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-            id="url_for"
-            name="url_for"
-            placeholder="Please Give a Superhero URL Name without any space..."
+            id="shop_link"
+            name="shop_link"
+            placeholder="Please Type a Superhero Merchandise URL..."
           />
 
+          <!-- URL For Character -->
+          <label for="char_page" class="text-white mt-2"
+            >URL For Character</label
+          >
+          <input
+            type="text"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+            id="char_page"
+            name="char_page"
+            placeholder="Please Give a Superhero Character URL..."
+          />
           <button type="submit" class="btn btn-primary mx-auto mt-4">
-            Edit Superhero
+            Add Superhero
           </button>
         </form>
       </div>

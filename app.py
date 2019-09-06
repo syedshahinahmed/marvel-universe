@@ -50,8 +50,8 @@ def addsuperhero():
 
 
 # Insert Superhero Route
-@app.route("/insertsuoerhero", methods=['POST'])
-def insertsuoerhero():
+@app.route("/insertsuperhero", methods=['POST'])
+def insertsuperhero():
     # Connecting To Superhero Database
     superheros = mongo.db.superhero
 
