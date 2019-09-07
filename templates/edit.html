@@ -21,7 +21,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="group_name"
             name="group_name"
-            placeholder="Enter Group Name..."
+            value="{{ superhero.group_name }}"
           />
 
           <!-- Real Name -->
@@ -31,7 +31,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="real_name"
             name="real_name"
-            placeholder="Enter Superhero's Real Name..."
+            value="{{ superhero.real_name }}"
           />
 
           <!-- Name -->
@@ -41,7 +41,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="name"
             name="name"
-            placeholder="Enter Superhero's Name..."
+            value="{{ superhero.name }}"
           />
           <!-- Aliases -->
           <label for="aliases" class="text-white mt-2">Alias(es)</label>
@@ -50,7 +50,48 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="aliases"
             name="aliases"
-            placeholder="Enter Superhero's Alias(es)..."
+            value="{{ superhero.aliases }}"
+          />
+
+
+          <!-- Species -->
+          <label for="species" class="text-white mt-2">Species</label>
+          <input
+            type="text"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+            id="species"
+            name="species"
+            value="{{ superhero.species }}"
+          />
+
+          <!-- Gender -->
+          <label for="gender" class="text-white mt-2">Gender</label>
+          <input
+            type="text"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
+            id="gender"
+            name="gender"
+            value="{{ superhero.gender }}"
+          />
+
+          <!-- Affiliation -->
+          <label for="affiliation" class="text-white mt-2">Affiliation</label>
+          <input
+            type="text"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+            id="affiliation"
+            name="affiliation"
+            value="{{ superhero.affiliation }}"
+          />
+
+          <!-- Status -->
+          <label for="status" class="text-white mt-2">Status</label>
+          <input
+            type="text"
+            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+            id="status"
+            name="status"
+            value="{{ superhero.status }}"
           />
 
           <!-- Short Description -->
@@ -63,7 +104,8 @@
             cols="30"
             rows="5"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-          ></textarea>
+            >{{ superhero.short_description }}</textarea
+          >
 
           <!-- Long Description -->
           <label for="long_description" class="text-white mt-2"
@@ -75,47 +117,9 @@
             cols="30"
             rows="5"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-          ></textarea>
+            >{{ superhero.long_description }}</textarea
+          >
 
-          <!-- Species -->
-          <label for="species" class="text-white mt-2">Species</label>
-          <input
-            type="text"
-            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-            id="species"
-            name="species"
-            placeholder="Enter Species Name..."
-          />
-
-          <!-- Gender -->
-          <label for="gender" class="text-white mt-2">Gender</label>
-          <input
-            type="text"
-            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="gender"
-            name="gender"
-            placeholder="Enter Gender..."
-          />
-
-          <!-- Affiliation -->
-          <label for="affiliation" class="text-white mt-2">Affiliation</label>
-          <input
-            type="text"
-            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-            id="affiliation"
-            name="affiliation"
-            placeholder="Enter Affiliation..."
-          />
-
-          <!-- Status -->
-          <label for="status" class="text-white mt-2">Status</label>
-          <input
-            type="text"
-            class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-            id="status"
-            name="status"
-            placeholder="Enter Status..."
-          />
 
           <!-- Powers One -->
           <label for="p1" class="text-white mt-2">Powers One</label>
@@ -125,7 +129,8 @@
             cols="20"
             rows="3"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-          ></textarea>
+            >{{ superhero.powers.p1 }}</textarea
+          >
 
           <!-- Powers Two -->
           <label for="p2" class="text-white mt-2">Powers Two</label>
@@ -135,7 +140,8 @@
             cols="20"
             rows="3"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-          ></textarea>
+            >{{ superhero.powers.p2 }}</textarea
+          >
 
           <!-- Powers Three -->
           <label for="p3" class="text-white mt-2">Powers Three</label>
@@ -145,7 +151,8 @@
             cols="20"
             rows="3"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-          ></textarea>
+            >{{ superhero.powers.p3 }}</textarea
+          >
 
           <!-- Other Abilities -->
           <label for="other_powers" class="text-white mt-2">Other Powers</label>
@@ -155,7 +162,8 @@
             cols="05"
             rows="2"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-          ></textarea>
+            >{{ superhero.powers.other_powers }}</textarea
+          >
 
           <!-- Abilities One -->
           <label for="a1" class="text-white mt-2">Abilities One</label>
@@ -165,7 +173,8 @@
             cols="20"
             rows="3"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-          ></textarea>
+            >{{ superhero.abilities.a1 }}</textarea
+          >
 
           <!-- Abilities Two -->
           <label for="a2" class="text-white mt-2">Abilities Two</label>
@@ -175,7 +184,8 @@
             cols="20"
             rows="3"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-          ></textarea>
+            >{{ superhero.abilities.a2 }}</textarea
+          >
 
           <!-- Abilities Three -->
           <label for="a3" class="text-white mt-2">Abilities Three</label>
@@ -185,7 +195,8 @@
             cols="20"
             rows="3"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-          ></textarea>
+            >{{ superhero.abilities.a3 }}</textarea
+          >
 
           <!-- Other Abilities -->
           <label for="other_abilities" class="text-white mt-2"
@@ -197,7 +208,8 @@
             cols="05"
             rows="2"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-          ></textarea>
+            >{{ superhero.abilities.other_abilities }}</textarea
+          >
 
           <!-- Poster URL -->
           <label for="poster" class="text-white mt-2">Poster URL</label>
@@ -206,7 +218,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="poster"
             name="poster"
-            placeholder="Enter Poster URL..."
+            value="{{ superhero.poster }}"
           />
 
           <!-- URL For URL For Merchandise -->
@@ -218,7 +230,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="shop_link"
             name="shop_link"
-            placeholder="Please Type Superhero's Merchandise URL..."
+            value="{{ superhero.shop_link }}"
           />
 
           <!-- URL For Character -->
@@ -230,7 +242,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="char_page"
             name="char_page"
-            placeholder="Please Give Superhero's Character URL..."
+            value="{{ superhero.char_page }}"
           />
           <button type="submit" class="btn btn-primary mx-auto mt-4">
             Edit Superhero

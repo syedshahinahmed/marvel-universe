@@ -42,7 +42,7 @@
                 <a href="{{url_for('viewsuperhero', superhero_id=superhero._id)}}">{{ loop.index }}. {{ superhero.name }}</a>
               </h4>
               <p class="mb-0 text-white-50">
-                {{ superhero.description }}
+                {{ superhero.short_description }}
               </p>
               <hr class="d-none d-lg-block mb-0 ml-0" />
               <a
@@ -83,7 +83,7 @@
                 >
               </h4>
               <p class="mb-0 text-white-50">
-                {{ superhero.description }}
+                {{ superhero.short_description }}
               </p>
               <hr class="d-none d-lg-block mb-0 mr-0" />
               <a
