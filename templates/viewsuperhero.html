@@ -19,7 +19,7 @@
 <section id="projects" class="projects-section bg-dark">
   <div class="container">
     <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-      <h2 class="text-center text-white">
+      <h2 class="text-center text-warning">
         Marvel Avengers: {{ superhero.name }}
       </h2>
       <div class="col-lg-12">
@@ -30,16 +30,14 @@
         />
       </div>
       <div class="col-lg-12">
-        <div class="bg-black text-center h-100 project">
+        <div class="bg-black h-100 project">
           <div class="d-flex h-100">
-            <div class="project-text w-100 my-auto text-center text-lg-left">
+            <div class="project-text w-100 my-auto  text-lg-left">
+              <h4 class="text-center text-warning">Biography</h4>
+              <hr />
               <p class="text-white">
                 Group Name:
                 <span class="text-primary">{{ superhero.group_name }}</span>
-              </p>
-              <p class="text-white">
-                Description:
-                <span class="text-white-50">{{ superhero.description }}</span>
               </p>
               <p class="text-white">
                 Species:
@@ -56,10 +54,71 @@
                 Status: <span class="text-info">{{ superhero.status }}</span>
               </p>
               <p class="text-white">
-                Powers and abilities:
-                <span class="text-light">{{
-                  superhero.powers_and_abilities
-                }}</span>
+                Description:
+                <span class="text-white-50"
+                  >{{ superhero.short_description }} <br /><br />
+                  {{ superhero.long_description }}</span
+                >
+              </p>
+
+              <h4 class="text-warning text-center">Powers</h4>
+              <hr />
+              <p class="text-white-50">
+                {{ superhero.powers.p1 }}
+              </p>
+              <p class="text-white-50">
+                {{ superhero.powers.p2 }}
+              </p>
+              <p class="text-white-50">
+                {{ superhero.powers.p3 }}
+              </p>
+              <p class="text-white-50">
+                {{ superhero.powers.other_powers }}
+              </p>
+
+              <h4 class="text-warning text-center">Abilities</h4>
+              <hr />
+              <p class="text-white-50">
+                {{ superhero.abilities.a1 }}
+              </p>
+              <p class="text-white-50">
+                {{ superhero.abilities.a2 }}
+              </p>
+              <p class="text-white-50">
+                {{ superhero.abilities.a3 }}
+              </p>
+              <p class="text-white-50">
+                {{ superhero.abilities.other_abilities }}
+              </p>
+              <h4 class="text-warning text-center">Affiliate Links</h4>
+              <hr />
+              <p class="text-white">
+                Big fan of Marvel {{ superhero.name }}? Why don't use our
+                affiliate links and buy your favourite superhero
+                {{ superhero.name }}'s merchandise and help us grow even bigger.
+              </p>
+              <p class="text-white">
+                Note:
+                <small class="text-white-50"
+                  >We Marvel Universe a non-profit Wiki Site. Where all our
+                  members are dedicated to provide all marvel fan great deal of
+                  information about their favourite Marvel Superhero.
+                  Product/Merchandise you buy through our affiliated link helps
+                  our site to stay alive and help all the marvel fan!...</small
+                >
+              </p>
+              <p class="text-white">
+                {{ superhero.name }} Homepage:
+                <a href="{{ superhero.char_page }}"
+                  ><small>{{ superhero.char_page }}</small></a
+                >
+              </p>
+
+              <p class="text-white">
+                Buy {{ superhero.name }} Merchandise:
+                <a href="{{ superhero.shop_link }}"
+                  ><small>{{ superhero.shop_link }}</small></a
+                >
               </p>
             </div>
           </div>
@@ -69,9 +128,9 @@
     <hr />
     <!--Movies-->
     <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-      <div class="col-md-12">
-        <h2 class="text-white text-center mt-2">
-          {{ superhero.name }} Movies Collection
+      <div class="col-md-12 mb-5">
+        <h2 class="text-warning text-center mt-2">
+          Popular {{ superhero.name }} Movies/Appearances Collection
         </h2>
       </div>
     </div>
@@ -90,7 +149,7 @@
 
             <a
               href="{{ superhero.m3.movie_shop_link }}"
-              class="btn btn-primary"
+              class="btn btn-primary btn-small"
               target="_blank"
               >Buy Movie</a
             >
@@ -111,7 +170,7 @@
 
             <a
               href="{{ superhero.m3.movie_shop_link }}"
-              class="btn btn-primary"
+              class="btn btn-primary btn-small"
               target="_blank"
               >Buy Movie</a
             >
@@ -132,11 +191,31 @@
 
             <a
               href="{{ superhero.m3.movie_shop_link }}"
-              class="btn btn-primary"
+              class="btn btn-primary btn-small"
               target="_blank"
               >Buy Movie</a
             >
           </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-12">
+        <h6 class="text-white text-center">Not What You looking for?</h6>
+        <div class="text-center mb-5">
+          <a
+            href="{{url_for('edit', superhero_id=superhero._id)}}"
+            class="btn btn-primary mx-auto btn-small mt-2"
+            >Edit</a
+          >
+        </div>
+        <div class="text-center">
+          <a
+            href="{{url_for('deletesuperhero', superhero_id=superhero._id)}}"
+            class="btn btn-primary mx-auto btn-small mt-2"
+            >X</a
+          >
         </div>
       </div>
     </div>
