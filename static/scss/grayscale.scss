@@ -1,21 +1,32 @@
-@import 'variables.scss';
-@import 'mixins.scss';
-@import 'navbar.scss';
-@import 'masthead.scss';
-@import 'buttons.scss';
-@import 'about.scss';
-@import 'projects.scss';
-@import 'signup.scss';
-@import 'contact.scss';
+@import "variables.scss";
+@import "mixins.scss";
+@import "navbar.scss";
+@import "masthead.scss";
+@import "buttons.scss";
+@import "about.scss";
+@import "projects.scss";
+@import "signup.scss";
+@import "contact.scss";
 
-html, body {
-  font-family: 'Nunito';
+html,
+body {
+  font-family: "Nunito", sans-serif;
+  // font-family: 'Varela Round', sans-serif;
   letter-spacing: 0.0625em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
 }
 
 hr {
   border-color: #64a19d;
-  border-width: .25rem;
+  border-width: 0.25rem;
 }
 
 u {

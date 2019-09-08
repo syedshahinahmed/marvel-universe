@@ -1,4 +1,5 @@
 #mainNav {
+  font-family: 'Abril Fatface', cursive;
   min-height: 56px;
   background-color: #fff;
 }
@@ -15,9 +16,11 @@
 }
 
 #mainNav .navbar-brand {
+  font-family: 'Abril Fatface', cursive;
   color: #161616;
+  color: brown;
   font-weight: 700;
-  padding: .9rem 0;
+  padding: 0.9rem 0;
 }
 
 #mainNav .navbar-nav .nav-item:hover {
@@ -41,7 +44,7 @@
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
-    padding: .5rem 0;
+    padding: 0.5rem 0;
     color: rgba(255, 255, 255, 0.5);
   }
   #mainNav .nav-link {
@@ -60,7 +63,8 @@
     background-color: #fff;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #161616;
+    font-family: 'Abril Fatface', cursive;
+    color: crimson;
   }
   #mainNav.navbar-shrink .nav-link {
     color: #161616;
@@ -284,14 +288,24 @@
   color: #fff;
 }
 
-html, body {
-  font-family: 'Nunito';
+html,
+body {
+  font-family: "Nunito", sans-serif;
   letter-spacing: 0.0625em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
 }
 
 hr {
   border-color: #64a19d;
-  border-width: .25rem;
+  border-width: 0.25rem;
 }
 
 u {

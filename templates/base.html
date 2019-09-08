@@ -9,35 +9,51 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-   <!-- Title -->
-   {% if title %}
-   <title>Marvel Universe - {{ title }}</title>
-   {% else %}
-   <title>Marvel Universe</title>
-   {% endif %}
+    <!-- Title -->
+    {% if title %}
+    <title>Marvel Universe - {{ title }}</title>
+    {% else %}
+    <title>Marvel Universe</title>
+    {% endif %}
     <!-- Bootstrap core CSS -->
-    <link href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
-
-    <!-- Custom fonts for this template -->
-    <link href="{{url_for('static',filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" />
     <link
-      href="https://fonts.googleapis.com/css?family=Varela+Round"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}"
       rel="stylesheet"
     />
 
-    <!-- Custom styles for this template -->
-    <link href="{{url_for('static',filename='scss/grayscale.css')}}" rel="stylesheet" />
+    <!-- Custom Fonts -->
+    <link
+      href="{{url_for('static',filename='vendor/fontawesome-free/css/all.min.css')}}"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS Styles -->
+    <link
+      href="{{url_for('static',filename='scss/grayscale.css')}}"
+      rel="stylesheet"
+    />
   </head>
 
   <body id="page-top">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="{{url_for('index')}}"
+        <a class="navbar-brand js-scroll-trigger" href="{{ url_for('index') }}"
           >Marvel Universe</a
         >
         <button
@@ -55,7 +71,11 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{{url_for('about')}}">About</a>
+              <a
+                class="nav-link js-scroll-trigger"
+                href="{{ url_for('about') }}"
+                >About</a
+              >
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="{{url_for('about')}}"
@@ -63,21 +83,20 @@
               >
             </li> -->
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{{url_for('contact')}}">Contact</a>
+              <a
+                class="nav-link js-scroll-trigger"
+                href="{{ url_for('contact') }}"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="container-fluid">
-       
-    
-    </div>
-    {% block content %}
-    {% endblock %}
+    <div class="container-fluid"></div>
+    {% block content %} {% endblock %}
 
-   
     <!-- Footer -->
     <footer class="bg-black small text-center text-white-50">
       <div class="container">
