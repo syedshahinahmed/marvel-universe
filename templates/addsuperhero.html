@@ -6,14 +6,10 @@
     <div class="row">
       <div class="col-md-10 col-lg-8 mx-auto text-center">
         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-        <h2 class="text-white mb-5">
-          Add a Superhero to Marvel Universe!
+        <h2 class="text-white mb-5 text-capitalize">
+          Add Superhero's To Marvel Universe!
         </h2>
-        <form
-          action="{{ url_for('insertsuperhero') }}"
-          method="POST"
-          class="form"
-        >
+        <form action="{{ url_for('addsuperhero') }}" method="POST" class="form">
           <!-- Group Name -->
           <label for="group_name" class="text-white">Group Name</label>
           <input
@@ -50,7 +46,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="aliases"
             name="aliases"
-            placeholder="Enter Superhero's Alias(es)..."
+            placeholder="Enter Superhero's Aliases..."
           />
 
           <!-- Species -->
@@ -60,7 +56,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="species"
             name="species"
-            placeholder="Enter Species Name..."
+            placeholder="Enter Superhero's Species..."
           />
 
           <!-- Gender -->
@@ -70,7 +66,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
             id="gender"
             name="gender"
-            placeholder="Enter Gender..."
+            placeholder="Enter Superhero's Gender..."
           />
 
           <!-- Affiliation -->
@@ -80,7 +76,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="affiliation"
             name="affiliation"
-            placeholder="Enter Affiliation..."
+            placeholder="Enter Superhero's Affiliation..."
           />
 
           <!-- Status -->
@@ -90,7 +86,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="status"
             name="status"
-            placeholder="Enter Status..."
+            placeholder="Enter Superhero's Status..."
           />
 
           <!-- Short Description -->
@@ -218,7 +214,7 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="shop_link"
             name="shop_link"
-            placeholder="Please Type Superhero's Merchandise URL..."
+            placeholder="Enter Merchandise URL..."
           />
 
           <!-- URL For Character -->
@@ -230,9 +226,8 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
             id="char_page"
             name="char_page"
-            placeholder="Please Give Superhero's Character URL..."
+            placeholder="Enter Character URL..."
           />
-
           <hr />
           <!-- Movie Deails One -->
           <h5 class="text-white mt-2 ">Movie Deails One</h5>
@@ -246,320 +241,331 @@
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
             id="collection_name"
             name="collection_name"
-            value="{{ superhero.m1.collection_name }}"
+            placeholder="Enter Movie - Collection Name..."
           />
           <!-- Movie Deails One - Title -->
-          <label for="title" class="text-white mt-2">Title</label>
+          <label for="m1_title" class="text-white mt-2">Title</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="title"
-            name="title"
-            value="{{ superhero.m1.title }}"
+            id="m1_title"
+            name="m1_title"
+            placeholder="Enter Movie - Title..."
           />
           <!-- Movie Deails One - phase -->
-          <label for="phase" class="text-white mt-2">Phase</label>
+          <label for="m1_phase" class="text-white mt-2">Phase</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="phase"
-            name="phase"
-            value="{{ superhero.m1.phase }}"
+            id="m1_phase"
+            name="m1_phase"
+            placeholder="Enter Movie - Phase..."
           />
 
           <!-- Movie Deails One - homepage -->
-          <label for="homepage" class="text-white mt-2">Homepage</label>
+          <label for="m1_homepage" class="text-white mt-2">Homepage</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="homepage"
-            name="homepage"
-            value="{{ superhero.m1.homepage }}"
+            id="m1_homepage"
+            name="m1_homepage"
+            placeholder="Enter Movie - Homepage..."
           />
 
           <!-- Movie Deails One - IMDB ID -->
-          <label for="imdb_id" class="text-white mt-2">IMDB ID</label>
+          <label for="m1_imdb_id" class="text-white mt-2">IMDB ID</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="imdb_id"
-            name="imdb_id"
-            value="{{ superhero.m1.imdb_id }}"
+            id="m1_imdb_id"
+            name="m1_imdb_id"
+            placeholder="Enter Movie - IMDB ID..."
           />
 
           <!-- Movie Deails One - genres -->
-          <label for="genres" class="text-white mt-2">Genres</label>
+          <label for="m1_genres" class="text-white mt-2">Genres</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="genres"
-            name="genres"
-            value="{{ superhero.m1.genres }}"
+            id="m1_genres"
+            name="m1_genres"
+            placeholder="Enter Movie - Genres..."
           />
 
           <!-- Movie Deails One - genres -->
-          <label for="overview" class="text-white mt-2">Overview</label>
+          <label for="m1_overview" class="text-white mt-2">Overview</label>
           <textarea
-            name="overview"
-            id="overview"
+            name="m1_overview"
+            id="m1_overview"
             cols="20"
             rows="4"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-            >{{ superhero.m1.overview }}</textarea
-          >
+          ></textarea>
 
           <!-- Movie Deails One - poster_path -->
-          <label for="poster_path" class="text-white mt-2">Poster Path</label>
+          <label for="m1_poster_path" class="text-white mt-2"
+            >Poster Path</label
+          >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="poster_path"
-            name="poster_path"
-            value="{{ superhero.m1.poster_path }}"
+            id="m1_poster_path"
+            name="m1_poster_path"
+            placeholder="Enter Movie - Poster Path..."
           />
 
           <!-- Movie Deails One - Backdrop Path -->
-          <label for="backdrop_path" class="text-white mt-2"
+          <label for="m1_backdrop_path" class="text-white mt-2"
             >Backdrop Path</label
           >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="backdrop_path"
-            name="backdrop_path"
-            value="{{ superhero.m1.backdrop_path }}"
+            id="m1_backdrop_path"
+            name="m1_backdrop_path"
+            placeholder="Enter Movie - Backdrop Path..."
           />
 
           <!-- Movie Deails One - Production Companies -->
-          <label for="production_companies" class="text-white mt-2"
+          <label for="m1_production_companies" class="text-white mt-2"
             >Production Companies</label
           >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="production_companies"
-            name="production_companies"
-            value="{{ superhero.m1.production_companies }}"
+            id="m1_production_companies"
+            name="m1_production_companies"
+            placeholder="Enter Movie - Production Companies Name..."
           />
 
           <!-- Movie Deails One - Logo Path -->
-          <label for="logo_path" class="text-white mt-2">Logo Path</label>
+          <label for="m1_logo_path" class="text-white mt-2">Logo Path</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="logo_path"
-            name="logo_path"
-            value="{{ superhero.m1.logo_path }}"
+            id="m1_logo_path"
+            name="m1_logo_path"
+            placeholder="Enter Movie - Logo Path..."
           />
 
           <!-- Movie Deails One - Language -->
-          <label for="language" class="text-white mt-2">Language</label>
+          <label for="m1_language" class="text-white mt-2">Language</label>
           <input
-            type="text"
+            type="m1_text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="language"
-            name="language"
-            value="{{ superhero.m1.language }}"
+            id="m1_language"
+            name="m1_language"
+            placeholder="Enter Movie - Language..."
           />
 
           <!-- Movie Deails One - Release Date -->
-          <label for="release_date" class="text-white mt-2">Release Date</label>
+          <label for="m1_release_date" class="text-white mt-2"
+            >Release Date</label
+          >
           <input
-            type="text"
+            type="m1_text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="release_date"
+            id="m1_release_date"
             name="release_date"
-            value="{{ superhero.m1.release_date }}"
+            placeholder="Enter Movie - Release Date..."
           />
 
           <!-- Movie Deails One - Tagline -->
-          <label for="tagline" class="text-white mt-2">Tagline</label>
+          <label for="m1_tagline" class="text-white mt-2">Tagline</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="tagline"
-            name="tagline"
-            value="{{ superhero.m1.tagline }}"
+            id="m1_tagline"
+            name="m1_tagline"
+            placeholder="Enter Movie - Tagline..."
           />
 
           <!-- Movie Deails One - Language -->
-          <label for="trailer_link" class="text-white mt-2">Trailer Link</label>
+          <label for="m1_trailer_link" class="text-white mt-2"
+            >Trailer Link</label
+          >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="trailer_link"
-            name="trailer_link"
-            value="{{ superhero.m1.trailer_link }}"
+            id="m1_trailer_link"
+            name="m1_trailer_link"
+            placeholder="Enter Movie - Trailer Link..."
           />
           <!-- Movie Deails One - Movie Shop Link -->
-          <label for="movie_shop_link" class="text-white mt-2"
+          <label for="m1_movie_shop_link" class="text-white mt-2"
             >Movie Shop Link</label
           >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="movie_shop_link"
-            name="movie_shop_link"
-            value="{{ superhero.m1.movie_shop_link }}"
+            id="m1_movie_shop_link"
+            name="m1_movie_shop_link"
+            placeholder="Enter Movie - Shop Link..."
           />
 
           <hr />
           <!-- Movie Deails Two -->
           <h5 class="text-white mt-2 ">Movie Deails Two</h5>
           <hr />
+
           <!-- Movie Deails Two - Collection Name-->
-          <label for="collection_name" class="text-white mt-2"
+          <label for="m2_collection_name" class="text-white mt-2"
             >Collection Name</label
           >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="collection_name"
-            name="collection_name"
-            value="{{ superhero.m2.collection_name }}"
+            id="m2_collection_name"
+            name="m2_collection_name"
+            placeholder="Enter Movie - Collection Name..."
           />
           <!-- Movie Deails Two - Title -->
-          <label for="title" class="text-white mt-2">Title</label>
+          <label for="m2_title" class="text-white mt-2">Title</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="title"
-            name="title"
-            value="{{ superhero.m2.title }}"
+            id="m2_title"
+            name="m2_title"
+            placeholder="Enter Movie - Title..."
           />
           <!-- Movie Deails Two - phase -->
-          <label for="phase" class="text-white mt-2">Phase</label>
+          <label for="m2_phase" class="text-white mt-2">Phase</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="phase"
-            name="phase"
-            value="{{ superhero.m2.phase }}"
+            id="m2_phase"
+            name="m2_phase"
+            placeholder="Enter Movie - Phase..."
           />
 
           <!-- Movie Deails Two - homepage -->
-          <label for="homepage" class="text-white mt-2">Homepage</label>
+          <label for="m2_homepage" class="text-white mt-2">Homepage</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="homepage"
-            name="homepage"
-            value="{{ superhero.m2.homepage }}"
+            id="m2_homepage"
+            name="m2_homepage"
+            placeholder="Enter Movie - Homepage..."
           />
 
           <!-- Movie Deails Two - IMDB ID -->
-          <label for="imdb_id" class="text-white mt-2">IMDB ID</label>
+          <label for="m2_imdb_id" class="text-white mt-2">IMDB ID</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="imdb_id"
-            name="imdb_id"
-            value="{{ superhero.m2.imdb_id }}"
+            id="m2_imdb_id"
+            name="m2_imdb_id"
+            placeholder="Enter Movie - IMDB ID ID..."
           />
 
           <!-- Movie Deails Two - genres -->
-          <label for="genres" class="text-white mt-2">Genres</label>
+          <label for="m2_genres" class="text-white mt-2">Genres</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="genres"
-            name="genres"
-            value="{{ superhero.m2.genres }}"
+            id="m2_genres"
+            name="m2_genres"
+            placeholder="Enter Movie - Genres..."
           />
 
           <!-- Movie Deails Two - genres -->
-          <label for="overview" class="text-white mt-2">Overview</label>
+          <label for="m2_overview" class="text-white mt-2">Overview</label>
           <textarea
-            name="overview"
-            id="overview"
+            name="m2_overview"
+            id="m2_overview"
             cols="20"
             rows="4"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-            >{{ superhero.m2.overview }}</textarea
-          >
+          ></textarea>
 
           <!-- Movie Deails Two - poster_path -->
-          <label for="poster_path" class="text-white mt-2">Poster Path</label>
+          <label for="m2_poster_path" class="text-white mt-2"
+            >Poster Path</label
+          >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="poster_path"
-            name="poster_path"
-            value="{{ superhero.m2.poster_path }}"
+            id="m2_poster_path"
+            name="m2_poster_path"
+            placeholder="Enter Movie - Poster Path..."
           />
 
           <!-- Movie Deails Two - Backdrop Path -->
-          <label for="backdrop_path" class="text-white mt-2"
+          <label for="m2_backdrop_path" class="text-white mt-2"
             >Backdrop Path</label
           >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="backdrop_path"
-            name="backdrop_path"
-            value="{{ superhero.m2.backdrop_path }}"
+            id="m2_backdrop_path"
+            name="m2_backdrop_path"
+            placeholder="Enter Movie - Backdrop Path..."
           />
 
           <!-- Movie Deails Two - Production Companies -->
-          <label for="production_companies" class="text-white mt-2"
+          <label for="m2_production_companies" class="text-white mt-2"
             >Production Companies</label
           >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="production_companies"
-            name="production_companies"
-            value="{{ superhero.m2.production_companies }}"
+            id="m2_production_companies"
+            name="m2_production_companies"
+            placeholder="Enter Movie - Production Companies Name..."
           />
 
           <!-- Movie Deails Two - Logo Path -->
-          <label for="logo_path" class="text-white mt-2">Logo Path</label>
+          <label for="m2_logo_path" class="text-white mt-2">Logo Path</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="logo_path"
-            name="logo_path"
-            value="{{ superhero.m2.logo_path }}"
+            id="m2_logo_path"
+            name="m2_logo_path"
+            placeholder="Enter Movie - Logo Path..."
           />
 
           <!-- Movie Deails Two - Language -->
-          <label for="language" class="text-white mt-2">Language</label>
+          <label for="m2_language" class="text-white mt-2">Language</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="language"
-            name="language"
-            value="{{ superhero.m2.language }}"
+            id="m2_language"
+            name="m2_language"
+            placeholder="Enter Movie - Language..."
           />
 
           <!-- Movie Deails Two - Release Date -->
-          <label for="release_date" class="text-white mt-2">Release Date</label>
+          <label for="m2_release_date" class="text-white mt-2"
+            >Release Date</label
+          >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="release_date"
-            name="release_date"
-            value="{{ superhero.m2.release_date }}"
+            id="m2_release_date"
+            name="m2_release_date"
+            placeholder="Enter Movie - Release Date..."
           />
 
           <!-- Movie Deails Two - Tagline -->
-          <label for="tagline" class="text-white mt-2">Tagline</label>
+          <label for="m2_tagline" class="text-white mt-2">Tagline</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="tagline"
-            name="tagline"
-            value="{{ superhero.m2.tagline }}"
+            id="m2_tagline"
+            name="m2_tagline"
+            placeholder="Enter Movie - Tagline..."
           />
 
           <!-- Movie Deails Two - Language -->
-          <label for="trailer_link" class="text-white mt-2">Trailer Link</label>
+          <label for="m2_trailer_link" class="text-white mt-2"
+            >Trailer Link</label
+          >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="trailer_link"
-            name="trailer_link"
-            value="{{ superhero.m2.trailer_link }}"
+            id="m2_trailer_link"
+            name="m2_trailer_link"
+            placeholder="Enter Movie - Trailer Link..."
           />
           <!-- Movie Deails Two - Movie Shop Link -->
           <label for="movie_shop_link" class="text-white mt-2"
@@ -568,9 +574,9 @@
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="movie_shop_link"
-            name="movie_shop_link"
-            value="{{ superhero.m2.movie_shop_link }}"
+            id="m2_movie_shop_link"
+            name="m2_movie_shop_link"
+            placeholder="Enter Movie - Shop Link..."
           />
 
           <hr />
@@ -578,169 +584,175 @@
           <h5 class="text-white mt-2 ">Movie Deails Three</h5>
           <hr />
           <!-- Movie Deails Three - Collection Name-->
-          <label for="collection_name" class="text-white mt-2"
+          <label for="m3_collection_name" class="text-white mt-2"
             >Collection Name</label
           >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="collection_name"
-            name="collection_name"
-            value="{{ superhero.m3.collection_name }}"
+            id="m3_collection_name"
+            name="m3_collection_name"
+            placeholder="Enter Movie - Collection Name..."
           />
           <!-- Movie Deails Three - Title -->
-          <label for="title" class="text-white mt-2">Title</label>
+          <label for="m3_title" class="text-white mt-2">Title</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="title"
-            name="title"
-            value="{{ superhero.m3.title }}"
+            id="m3_title"
+            name="m3_title"
+            placeholder="Enter Movie - Title..."
           />
           <!-- Movie Deails Three - phase -->
-          <label for="phase" class="text-white mt-2">Phase</label>
+          <label for="m3_phase" class="text-white mt-2">Phase</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="phase"
-            name="phase"
-            value="{{ superhero.m3.phase }}"
+            id="m3_phase"
+            name="m3_phase"
+            placeholder="Enter Movie - Phase..."
           />
 
           <!-- Movie Deails Three - homepage -->
-          <label for="homepage" class="text-white mt-2">Homepage</label>
+          <label for="m3_homepage" class="text-white mt-2">Homepage</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="homepage"
-            name="homepage"
-            value="{{ superhero.m3.homepage }}"
+            id="m3_homepage"
+            name="m3_homepage"
+            placeholder="Enter Movie - Homepage..."
           />
 
           <!-- Movie Deails Three - IMDB ID -->
-          <label for="imdb_id" class="text-white mt-2">IMDB ID</label>
+          <label for="m3_imdb_id" class="text-white mt-2">IMDB ID</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="imdb_id"
-            name="imdb_id"
-            value="{{ superhero.m3.imdb_id }}"
+            id="m3_imdb_id"
+            name="m3_imdb_id"
+            placeholder="Enter Movie - IMDB ID..."
           />
 
           <!-- Movie Deails Three - genres -->
-          <label for="genres" class="text-white mt-2">Genres</label>
+          <label for="m3_genres" class="text-white mt-2">Genres</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="genres"
-            name="genres"
-            value="{{ superhero.m3.genres }}"
+            id="m3_genres"
+            name="m3_genres"
+            placeholder="Enter Movie - Genres..."
           />
 
           <!-- Movie Deails Three - genres -->
-          <label for="overview" class="text-white mt-2">Overview</label>
+          <label for="m3_overview" class="text-white mt-2">Overview</label>
           <textarea
-            name="overview"
-            id="overview"
+            name="m3_overview"
+            id="m3_overview"
             cols="20"
             rows="4"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-            >{{ superhero.m3.overview }}</textarea
-          >
+          ></textarea>
 
-          <!-- Movie Deails Three - poster_path -->
-          <label for="poster_path" class="text-white mt-2">Poster Path</label>
+          <!-- Movie Deails Three - Poster Path -->
+          <label for="m3_poster_path" class="text-white mt-2"
+            >Poster Path</label
+          >
           <input
-            type="text"
+            type="m3_text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="poster_path"
-            name="poster_path"
-            value="{{ superhero.m3.poster_path }}"
+            id="m3_poster_path"
+            name="m3_poster_path"
+            placeholder="Enter Movie - Poster Path..."
           />
 
           <!-- Movie Deails Three - Backdrop Path -->
-          <label for="backdrop_path" class="text-white mt-2"
+          <label for="m3_backdrop_path" class="text-white mt-2"
             >Backdrop Path</label
           >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="backdrop_path"
-            name="backdrop_path"
-            value="{{ superhero.m3.backdrop_path }}"
+            id="m3_backdrop_path"
+            name="m3_backdrop_path"
+            placeholder="Enter Movie - Backdrop Path Path..."
           />
 
           <!-- Movie Deails Three - Production Companies -->
-          <label for="production_companies" class="text-white mt-2"
+          <label for="m3_production_companies" class="text-white mt-2"
             >Production Companies</label
           >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="production_companies"
-            name="production_companies"
-            value="{{ superhero.m3.production_companies }}"
+            id="m3_production_companies"
+            name="m3_production_companies"
+            placeholder="Enter Movie - Production Companies Name..."
           />
 
           <!-- Movie Deails Three - Logo Path -->
-          <label for="logo_path" class="text-white mt-2">Logo Path</label>
+          <label for="lm3_ogo_path" class="text-white mt-2">Logo Path</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="logo_path"
-            name="logo_path"
-            value="{{ superhero.m3.logo_path }}"
+            id="m3_logo_path"
+            name="m3_logo_path"
+            placeholder="Enter Movie - Production Companies Logo Path..."
           />
 
           <!-- Movie Deails Three - Language -->
-          <label for="language" class="text-white mt-2">Language</label>
+          <label for="m3_language" class="text-white mt-2">Language</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="language"
-            name="language"
-            value="{{ superhero.m3.language }}"
+            id="m3_language"
+            name="m3_language"
+            placeholder="Enter Movie - Language..."
           />
 
           <!-- Movie Deails Three - Release Date -->
-          <label for="release_date" class="text-white mt-2">Release Date</label>
+          <label for="m3_release_date" class="text-white mt-2"
+            >Release Date</label
+          >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="release_date"
-            name="release_date"
-            value="{{ superhero.m3.release_date }}"
+            id="m3_release_date"
+            name="m3_release_date"
+            placeholder="Enter Movie - Release Date..."
           />
 
           <!-- Movie Deails Three - Tagline -->
-          <label for="tagline" class="text-white mt-2">Tagline</label>
+          <label for="m3_tagline" class="text-white mt-2">Tagline</label>
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="tagline"
-            name="tagline"
-            value="{{ superhero.m3.tagline }}"
+            id="m3_tagline"
+            name="m3_tagline"
+            placeholder="Enter Movie - Tagline..."
           />
 
-          <!-- Movie Deails Three - Language -->
-          <label for="trailer_link" class="text-white mt-2">Trailer Link</label>
+          <!-- Movie Deails Three - Trailer Link -->
+          <label for="m3_trailer_link" class="text-white mt-2"
+            >Trailer Link</label
+          >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="trailer_link"
-            name="trailer_link"
-            value="{{ superhero.m3.trailer_link }}"
+            id="m3_trailer_link"
+            name="m3_trailer_link"
+            placeholder="Enter Movie - Trailer Link..."
           />
+
           <!-- Movie Deails Three - Movie Shop Link -->
-          <label for="movie_shop_link" class="text-white mt-2"
+          <label for="m3_movie_shop_link" class="text-white mt-2"
             >Movie Shop Link</label
           >
           <input
             type="text"
             class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
-            id="movie_shop_link"
-            name="movie_shop_link"
-            value="{{ superhero.m3.movie_shop_link }}"
+            id="m3_movie_shop_link"
+            name="m3_movie_shop_link"
+            placeholder="Enter Movie - Shop Link..."
           />
 
           <button type="submit" class="btn btn-primary mx-auto mt-4">
