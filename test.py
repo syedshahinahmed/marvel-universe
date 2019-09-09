@@ -67,7 +67,7 @@ def edit(superhero_id):
     the_superhero = mongo.db.marvel_universe.find_one(
         {'_id': ObjectId(superhero_id)})
     # all_group = mongo.db.fav_superhero.find()
-    return render_template('edit.html', title="Edit", superhero=the_superhero)
+    return render_template('editsuperhero.html', title="Edit", superhero=the_superhero)
 
 
 # View Individual Superhero Route
