@@ -199,13 +199,18 @@
   font-size: 90%;
 }
 
+.projects-section .project-text iframe {
+  display: block;
+  width: 100%;
+}
+
 @media (min-width: 992px) {
   .projects-section .project-text {
     padding: 5rem;
   }
   .projects-section .project-text hr {
     border-color: #64a19d;
-    border-width: .25rem;
+    border-width: 0.25rem;
     width: 30%;
   }
 }

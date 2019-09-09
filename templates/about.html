@@ -4,29 +4,34 @@
 <section id="about" class="about-section text-center">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto">
+      <div class="col-lg-12 mx-auto">
         <h2 class="text-white mb-4 text-uppercase">{{ title }}</h2>
         <p class="text-white-50">
-          We are currently managing lots of articles, and we could use your help
-          to make many more. We hope that you will add to the site!
+          We Marvel Universe a non-profit site. We try to provide our user best
+          user experirence possible. This is for Marvel fans. At the moment we
+          are provideing Marvel Avengers wiki. But we are panning to add more
+          and more marvel superhero and evetually every marvel comics superhero
+          in the future.
+        </p>
+        <p class="text-white-50">
+          Find out about all Marvel different marvel phasees ands more. We are
+          currently managing lots of articles, and we could use your help to
+          make many more. We hope that you will add to the site!
         </p>
       </div>
     </div>
-    <!-- <img
-      src="{{url_for('static',filename='img/ipad.png')}}"
-      class="img-fluid"
-      alt=""
-    /> -->
   </div>
 
   <!-- PHASE ONE -->
   <div class="container">
+    <hr>
     <h2 class="text-white mb-4 text-uppercase">
       PHASE ONE
     </h2>
+    <hr class="mb-5">
     <div class="row">
       {% for p1 in phaseone %}
-      <div class="col-md-4">
+      <div class="col-md-4 mb-3">
         <div class="card mx-auto mb-3" style="width: 18rem;">
           <img
             src="http://image.tmdb.org/t/p/w500{{ p1.poster_path }}"
@@ -35,7 +40,9 @@
           />
           <div class="card-body">
             <h5 class="card-title">{{ p1.title }}</h5>
-            <a href="{{url_for('movie', movie_id=p1._id)}}" class="btn btn-primary btn-small float-left"
+            <a
+              href="{{url_for('movie', movie_id=p1._id)}}"
+              class="btn btn-primary btn-small float-left"
               >View Info</a
             >
             <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
@@ -48,9 +55,11 @@
 
   <!-- PHASE TWO -->
   <div class="container">
+    <hr>
     <h2 class="text-white mb-4 text-uppercase">
       PHASE TWO
     </h2>
+    <hr class="mb-5">
     <div class="row">
       {% for p2 in phasetwo %}
       <div class="col-md-4">
@@ -62,7 +71,9 @@
           />
           <div class="card-body">
             <h5 class="card-title">{{ p2.title }}</h5>
-            <a href="{{url_for('movie', movie_id=p2._id)}}" class="btn btn-primary btn-small float-left"
+            <a
+              href="{{url_for('movie', movie_id=p2._id)}}"
+              class="btn btn-primary btn-small float-left"
               >View Info</a
             >
             <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
@@ -75,9 +86,11 @@
   <!-- PHASE THREE -->
 
   <div class="container">
+    <hr>
     <h2 class="text-white mb-4 text-uppercase">
       PHASE Three
     </h2>
+    <hr>
     <div class="row">
       {% for p3 in phasethree %}
       <div class="col-md-4">
@@ -89,7 +102,9 @@
           />
           <div class="card-body">
             <h5 class="card-title">{{ p3.title }}</h5>
-            <a href="{{url_for('movie', movie_id=p3._id)}}" class="btn btn-primary btn-small float-left"
+            <a
+              href="{{url_for('movie', movie_id=p3._id)}}"
+              class="btn btn-primary btn-small float-left"
               >View Info</a
             >
             <a href="#" class="btn btn-primary btn-small float-right">Buy</a>
@@ -101,8 +116,5 @@
   </div>
 
   <!-- PHASE FOUR -->
-
-  
-
 </section>
 {% endblock %}

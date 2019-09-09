@@ -10,11 +10,15 @@
   .project-text {
     padding: 3rem;
     font-size: 90%;
+    iframe {
+      display: block;
+      width: 100%;
+    }
     @media (min-width: 992px) {
       padding: 5rem;
       hr {
         border-color: $primary;
-        border-width: .25rem;
+        border-width: 0.25rem;
         width: 30%;
       }
     }
