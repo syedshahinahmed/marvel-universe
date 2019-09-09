@@ -189,6 +189,13 @@
   padding: 10rem 0;
 }
 
+.projects-section u {
+  -webkit-text-decoration-color: #64a19d;
+          text-decoration-color: #64a19d;
+  border-width: 0.25rem;
+  width: 30%;
+}
+
 .projects-section .featured-text {
   padding: 2rem;
 }
@@ -291,14 +298,14 @@
   text-align: center;
   height: 3rem;
   width: 3rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: #a52a2a;
   border-radius: 100%;
   line-height: 3rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(240, 248, 255, 0.3);
 }
 
 .contact-section .social a:hover {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(240, 248, 255, 0.5);
 }
 
 .contact-section .social a:active {

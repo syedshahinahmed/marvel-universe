@@ -3,7 +3,11 @@
 <!-- Superhero Section -->
 <section id="projects" class="projects-section bg-dark">
   <div class="container">
-    <!-- Superhero One Row -->
+    <h1 class="text-warning mt-2 text-center">
+      <u>{{ movie.title }}</u>
+    </h1>
+
+    <!-- Superhero Movie Info Row -->
     <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
       <div class="col-lg-6">
         <img
@@ -16,85 +20,92 @@
         <div class="bg-white h-100 project">
           <div class="project-text">
             <img
-            class="img-fluid"
-            src="http://image.tmdb.org/t/p/w500{{ movie.logo_path }}"
-            alt="{{ movie.title }}"
-          />
-          <h4 class="text-black mt-2">
-            <u>{{ movie.title }}</u>
-          </h4>
-          <p class="text-black">
-            <u>Marvel Phase</u>:
-            <span class="text-danger">{{ movie.overview }}</span>
-          </p>
-          <p class="text-black">
-            <u>Marvel Phase</u>:
-            <span class="text-danger">{{ movie.phase }}</span>
-          </p>
-          <p class="text-black">
-            <u>Genres</u>: <span class="text-danger">{{ movie.genres }}</span>
-          </p>
-          <p class="text-black">
-            <u>Language</u>:
-            <span class="text-danger">{{ movie.language }}</span>
-          </p>
-          <p class="text-black">
-            <u>Production</u>:
-            <span class="text-danger">{{ movie.production_companies }}</span>
-          </p>
-          <p class="text-black">
-            <u>Release Date</u>:
-            <span class="text-danger">{{ movie.release_date }}</span>
-          </p>
-          <p class="text-black">
-            <u>Tagline</u>:
-            <span class="text-danger">{{ movie.tagline }}</span>
-          </p>
+              class="img-fluid"
+              src="http://image.tmdb.org/t/p/w500{{ movie.logo_path }}"
+              alt="{{ movie.title }}"
+            />
+            
+            <p class="text-black mt-2">
+              <u>Marvel Phase</u>:
+              <span class="text-danger">{{ movie.overview }}</span>
+            </p>
+            <p class="text-black">
+              <u>Marvel Phase</u>:
+              <span class="text-danger">{{ movie.phase }}</span>
+            </p>
+            <p class="text-black">
+              <u>Genres</u>: <span class="text-danger">{{ movie.genres }}</span>
+            </p>
+            <p class="text-black">
+              <u>Language</u>:
+              <span class="text-danger">{{ movie.language }}</span>
+            </p>
+            <p class="text-black">
+              <u>Production</u>:
+              <span class="text-danger">{{ movie.production_companies }}</span>
+            </p>
+            <p class="text-black">
+              <u>Release Date</u>:
+              <span class="text-danger">{{ movie.release_date }}</span>
+            </p>
+            <p class="text-black">
+              <u>Tagline</u>:
+              <span class="text-danger">{{ movie.tagline }}</span>
+            </p>
 
-          <p class="text-black">
-            <u>Homepage</u>:
-            <small
-              ><a href="{{ movie.homepage }}" target="_blank">{{
-                movie.homepage
-              }}</a></small
-            >
-          </p>
-          <p class="text-black">
-            <u>IMDB</u>:
-            <small
-              ><a
-                href="https://www.imdb.com/title/{{ movie.imdb_id }}"
-                target="_blank"
-                >https://www.imdb.com/title/{{ movie.imdb_id }}</a
-              ></small
-            >
-          </p>
-          <p class="text-black">
-            <u>Buy Movie</u>:
-            <small
-              ><a
-                href="https://www.imdb.com/title/{{ movie.imdb_id }}"
-                target="_blank"
-                 class="btn btn-primary btn-small">Click to buy</a
-              ></small
-            >
-          </p>
+            <p class="text-black">
+              <u>Homepage</u>:
+              <small
+                ><a href="{{ movie.homepage }}" target="_blank">{{
+                  movie.homepage
+                }}</a></small
+              >
+            </p>
+            <p class="text-black">
+              <u>IMDB</u>:
+              <small
+                ><a
+                  href="https://www.imdb.com/title/{{ movie.imdb_id }}"
+                  target="_blank"
+                  >https://www.imdb.com/title/{{ movie.imdb_id }}</a
+                ></small
+              >
+            </p>
+            <p class="text-black">
+              <u>Buy Movie</u>:
+              <small
+                ><a
+                  href="https://www.imdb.com/title/{{ movie.imdb_id }}"
+                  target="_blank"
+                  class="btn btn-primary btn-small"
+                  >Click to buy</a
+                ></small
+              >
+            </p>
           </div>
         </div>
       </div>
-      
     </div>
-    <hr>
+    <hr />
   </div>
 
   <div class="container projects-section bg-dark">
-    <!-- Superhero One Row -->
+    <!-- Superhero Trailer Row -->
     <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-        <h4 class="text-white text-center"><u>Watch {{ movie.title }} Trailer</u> </h4>
+      <h1 class="text-warning mt-2 text-center">
+        <u>{{ movie.title }} Trailer</u>
+      </h1>
       <div class="col-lg-12">
         <div class="bg-dark project">
           <div class="project-text text-center">
-              <iframe width="560" height="315" src="{{movie.trailer_link}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe
+              width="560"
+              height="315"
+              src="{{ movie.trailer_link }}"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>
