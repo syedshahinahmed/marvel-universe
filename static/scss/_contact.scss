@@ -1,4 +1,9 @@
 .contact-section {
+  hr {
+    border-color: $primary;
+    border-width: 0.25rem;
+    width: 30%;
+  }
   padding: 5rem 0 0;
   .card {
     border: 0;
