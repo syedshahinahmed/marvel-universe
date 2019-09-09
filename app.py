@@ -186,13 +186,13 @@ def movie(movie_id):
     return render_template('movies.html', movie=the_movie)
 
 
-@app.route("/popularmovie/<movie_id>")
-def popularmovie(movie_id):
-    # Finding Individual Movie From movies Database
-    the_movie = mongo.db.marvel_universe.find_one(
-        {'movies': ObjectId(movie_id)})
+# @app.route("/popularmovie/<movie_id>")
+# def popularmovie(movie_id):
+#     # Finding Individual Movie From movies Database
+#     the_movie = mongo.db.marvel_universe.find_one(
+#         {'movies': ObjectId(movie_id)})
 
-    return render_template('themovie.html', movie=the_movie)
+#     return render_template('themovie.html', movie=the_movie)
 
 
 #####################
