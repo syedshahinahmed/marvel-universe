@@ -20,12 +20,6 @@ mongo = PyMongo(app)
 def index():
     return render_template("index.html", superheros=mongo.db.marvel_universe.find())
 
-# Home Route
-# @app.route('/')
-# def index():
-#     super = superheros=mongo.db.marvel_universe.insert_one()
-#     return "<h1>Sucessfully Added</h1>"
-
 
 # About Route
 @app.route('/about')
@@ -198,7 +192,7 @@ def popularmovie(movie_id):
     the_movie = mongo.db.marvel_universe.find_one(
         {'movies': ObjectId(movie_id)})
 
-    return render_template('movies.html', movie=the_movie)
+    return render_template('themovie.html', movie=the_movie)
 
 
 #####################
