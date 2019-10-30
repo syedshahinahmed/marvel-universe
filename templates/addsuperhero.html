@@ -9,7 +9,7 @@
         <h2 class="text-white mb-5 text-capitalize">
           Add Superhero's To Marvel Universe!
         </h2>
-        <form action="{{ url_for('addsuperhero') }}" method="POST" class="form">
+        <form action="{{ url_for('insertsuperhero') }}" method="POST" class="form">
           <!-- Group Name -->
           <label for="group_name" class="text-white">Group Name</label>
           <input
@@ -287,9 +287,9 @@
             placeholder="Enter Movie Tilte..."
           />
 
-          <!-- Movie One Overview -->
+          <!-- Movie Two Overview -->
           <label for="m2_overview" class="text-white mt-2"
-            >Movie One Overview</label
+            >Movie Two Overview</label
           >
           <textarea
             name="m2_overview"
@@ -335,9 +335,9 @@
             placeholder="Enter Movie Tilte..."
           />
 
-          <!-- Movie One Overview -->
+          <!-- Movie Three Overview -->
           <label for="m3_overview" class="text-white mt-2"
-            >Movie One Overview</label
+            >Movie Three Overview</label
           >
           <textarea
             name="m3_overview"
