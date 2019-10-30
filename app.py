@@ -117,6 +117,7 @@ def updatesuperhero(superhero_id):
         "m2_movie_shop_link": request.form.get("m2_movie_shop_link"),
         "m3_title": request.form.get("m3_title"),
         "m3_overview": request.form.get("m3_overview"),
+        "m3_poster_path": request.form.get("m3_poster_path"),
         "m3_movie_shop_link": request.form.get("m3_movie_shop_link")
     })
     return redirect(url_for("index"))
