@@ -9,7 +9,13 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 
 # Mongo Config
-app.config["MONGO_URI"] = "mongodb+srv://syedroot:Azasr00t@syedcluster-eyeen.mongodb.net/marfever?retryWrites=true&w=majority"
+
+app.config["MONGO_DBNAME"] = 'marfever'
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
+# app.config.from_pyfile("config.py")
+# app.config.from_object("app_config.DefaultConfig")
+app.config["MONGO_URI"]
+
 mongo = PyMongo(app)
 
 ################
@@ -150,5 +156,14 @@ def movie(movie_id):
 
 #####################
 #### Deployment #####
-if __name__ == "__main__":
-    app.run(debug=True)
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
+
+
+# Deplayment server
+
+if __name__ == '__main__':
+    app.run(host=os.environ.get('IP'),
+            port=int(os.environ.get('PORT')),
+            debug=True)
