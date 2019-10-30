@@ -50,31 +50,31 @@
               <h4 class="text-warning text-center">Powers</h4>
               <hr />
               <p class="text-white-50">
-                {{ superhero.powers.p1 }}
+                {{ superhero.p1 }}
               </p>
               <p class="text-white-50">
-                {{ superhero.powers.p2 }}
+                {{ superhero.p2 }}
               </p>
               <p class="text-white-50">
-                {{ superhero.powers.p3 }}
+                {{ superhero.p3 }}
               </p>
               <p class="text-white-50">
-                {{ superhero.powers.other_powers }}
+                {{ superhero.p4 }}
               </p>
               <hr />
               <h4 class="text-warning text-center">Abilities</h4>
               <hr />
               <p class="text-white-50">
-                {{ superhero.abilities.a1 }}
+                {{ superhero.a1 }}
               </p>
               <p class="text-white-50">
-                {{ superhero.abilities.a2 }}
+                {{ superhero.a2 }}
               </p>
               <p class="text-white-50">
-                {{ superhero.abilities.a3 }}
+                {{ superhero.a3 }}
               </p>
               <p class="text-white-50">
-                {{ superhero.abilities.other_abilities }}
+                {{ superhero.a4 }}
               </p>
               <hr />
               <h4 class="text-warning text-center">Affiliate Links</h4>
@@ -127,16 +127,16 @@
       <div class="col-md-4">
         <div class="card mx-auto mb-3" style="width: 18rem;">
           <img
-            src="http://image.tmdb.org/t/p/w500{{ superhero.m1.poster_path }}"
+            src="http://image.tmdb.org/t/p/w500{{ superhero.m1_poster_path }}"
             class="card-img-top"
-            alt="{{ superhero.m1.title }}"
+            alt="{{ superhero.m1_title }}"
           />
           <div class="card-body">
-            <h5 class="card-title">{{ superhero.m1.title }}</h5>
-            <p>{{ superhero.m3.overview }}</p>
+            <h5 class="card-title">{{ superhero.m1_title }}</h5>
+            <p>{{ superhero.m1_overview | truncate(150)}}</p>
 
             <a
-              href="{{ superhero.m3.movie_shop_link }}"
+              href="{{ superhero.m1_movie_shop_link }}"
               class="btn btn-primary btn-small"
               target="_blank"
               >Buy Movie</a
@@ -148,16 +148,16 @@
       <div class="col-md-4">
         <div class="card mx-auto mb-3" style="width: 18rem;">
           <img
-            src="http://image.tmdb.org/t/p/w500{{ superhero.m2.poster_path }}"
+            src="http://image.tmdb.org/t/p/w500{{ superhero.m2_poster_path }}"
             class="card-img-top"
-            alt="{{ superhero.m2.title }}"
+            alt="{{ superhero.m2_title }}"
           />
           <div class="card-body">
-            <h5 class="card-title">{{ superhero.m2.title }}</h5>
-            <p>{{ superhero.m3.overview }}</p>
+            <h5 class="card-title">{{ superhero.m2_title }}</h5>
+            <p>{{ superhero.m2_overview | truncate(150)}}</p>
 
             <a
-              href="{{ superhero.m3.movie_shop_link }}"
+              href="{{ superhero.m2_movie_shop_link }}"
               class="btn btn-primary btn-small"
               target="_blank"
               >Buy Movie</a
@@ -169,16 +169,16 @@
       <div class="col-md-4">
         <div class="card mx-auto mb-3" style="width: 18rem;">
           <img
-            src="http://image.tmdb.org/t/p/w500{{ superhero.m3.poster_path }}"
+            src="http://image.tmdb.org/t/p/w500{{ superhero.m3_poster_path }}"
             class="card-img-top"
-            alt="{{ superhero.m3.title }}"
+            alt="{{ superhero.m3_title }}"
           />
           <div class="card-body">
-            <h5 class="card-title">{{ superhero.m3.title }}</h5>
-            <p>{{ superhero.m3.overview }}</p>
+            <h5 class="card-title">{{ superhero.m3_title }}</h5>
+            <p>{{ superhero.m3_overview | truncate(150)}}</p>
 
             <a
-              href="{{ superhero.m3.movie_shop_link }}"
+              href="{{ superhero.m3_movie_shop_link }}"
               class="btn btn-primary btn-small"
               target="_blank"
               >Buy Movie</a
