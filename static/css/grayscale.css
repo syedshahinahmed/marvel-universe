@@ -1,4 +1,5 @@
 #mainNav {
+  font-family: 'Abril Fatface', cursive;
   min-height: 56px;
   background-color: #fff;
 }
@@ -15,9 +16,11 @@
 }
 
 #mainNav .navbar-brand {
+  font-family: 'Abril Fatface', cursive;
   color: #161616;
+  color: brown;
   font-weight: 700;
-  padding: .9rem 0;
+  padding: 0.9rem 0;
 }
 
 #mainNav .navbar-nav .nav-item:hover {
@@ -41,7 +44,7 @@
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
-    padding: .5rem 0;
+    padding: 0.5rem 0;
     color: rgba(255, 255, 255, 0.5);
   }
   #mainNav .nav-link {
@@ -60,7 +63,8 @@
     background-color: #fff;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #161616;
+    font-family: 'Abril Fatface', cursive;
+    color: crimson;
   }
   #mainNav.navbar-shrink .nav-link {
     color: #161616;
@@ -86,8 +90,8 @@
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616)), url("../img/bg-masthead.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/bg-masthead.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616)), url("../img/Home.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/Home.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -171,12 +175,25 @@
   background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
 }
 
+.about-section hr {
+  border-color: #64a19d;
+  border-width: 0.25rem;
+  width: 30%;
+}
+
 .about-section p {
   margin-bottom: 5rem;
 }
 
 .projects-section {
   padding: 10rem 0;
+}
+
+.projects-section u {
+  -webkit-text-decoration-color: #64a19d;
+          text-decoration-color: #64a19d;
+  border-width: 0.25rem;
+  width: 30%;
 }
 
 .projects-section .featured-text {
@@ -195,13 +212,18 @@
   font-size: 90%;
 }
 
+.projects-section .project-text iframe {
+  display: block;
+  width: 100%;
+}
+
 @media (min-width: 992px) {
   .projects-section .project-text {
     padding: 5rem;
   }
   .projects-section .project-text hr {
     border-color: #64a19d;
-    border-width: .25rem;
+    border-width: 0.25rem;
     width: 30%;
   }
 }
@@ -228,8 +250,26 @@
   border: 0;
 }
 
+.signup-section .form input {
+  -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+          box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  padding: 1.25rem 2rem;
+  height: auto;
+  font-family: 'Varela Round';
+  font-size: 80%;
+  text-transform: capitalize;
+  letter-spacing: 0.15rem;
+  border: 0;
+}
+
 .contact-section {
   padding: 5rem 0 0;
+}
+
+.contact-section hr {
+  border-color: #64a19d;
+  border-width: 0.25rem;
+  width: 30%;
 }
 
 .contact-section .card {
@@ -258,23 +298,43 @@
   text-align: center;
   height: 3rem;
   width: 3rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: #a52a2a;
   border-radius: 100%;
   line-height: 3rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(240, 248, 255, 0.3);
 }
 
 .contact-section .social a:hover {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(240, 248, 255, 0.5);
 }
 
 .contact-section .social a:active {
   color: #fff;
 }
 
+html,
 body {
-  font-family: 'Nunito';
+  font-family: "Nunito", sans-serif;
   letter-spacing: 0.0625em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+hr {
+  border-color: #64a19d;
+  border-width: 0.25rem;
+}
+
+u {
+  -webkit-text-decoration-color: darkgoldenrod;
+          text-decoration-color: darkgoldenrod;
 }
 
 a {
@@ -301,3 +361,4 @@ a:focus, a:hover {
 footer {
   padding: 5rem 0;
 }
+/*# sourceMappingURL=grayscale.css.map */
